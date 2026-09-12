@@ -1,0 +1,94 @@
+import './style.css';
+
+const paths = {
+  'arrow-up-right': '<path d="M7 17 17 7M7 7h10v10"/>', 'arrow-up':'<path d="m5 12 7-7 7 7M12 5v14"/>',
+  search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/>', sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>', moon:'<path d="M20.8 13A9 9 0 0 1 11 3.2 9 9 0 1 0 20.8 13Z"/>',
+  mail:'<rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/>', 'map-pin':'<path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>',
+  github:'<path d="M9 19c-4 1-4-2-6-2m12 5v-4a3.5 3.5 0 0 0-1-2.8c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.3 4a5 5 0 0 0-.1-4S18 0 15 1.6a14 14 0 0 0-6 0C6 0 4.8 0 4.8 0a5 5 0 0 0-.1 4 5.4 5.4 0 0 0-1.5 4.2c0 5.4 3.5 6.6 6.8 7A3.5 3.5 0 0 0 9 18v4" transform="translate(1 2) scale(.9)"/>',
+  plus:'<path d="M12 5v14M5 12h14"/>', bookmark:'<path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16l-6-4Z"/>', box:'<path d="m12 3 9 5v9l-9 5-9-5V8Z M3 8l9 5 9-5M12 13v9M7.5 5.5l9 5"/>', copy:'<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/>',
+  'chevron-down':'<path d="m6 9 6 6 6-6"/>', 'graduation-cap':'<path d="m2 9 10-5 10 5-10 5ZM6 11v6c4 3 8 3 12 0v-6M22 9v7"/>', 'wifi-off':'<path d="m2 2 20 20M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5-2.5M2 9a16 16 0 0 1 4-2M10 5a16 16 0 0 1 12 4M16 11a10 10 0 0 1 3 2M12 20h.01"/>', shield:'<path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6ZM9 12l2 2 4-4"/>', download:'<path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/>', check:'<path d="m5 12 4 4L19 6"/>'
+};
+const icon = name => `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths['arrow-up-right']}</svg>`;
+function hydrateIcons(root = document) { root.querySelectorAll('[data-icon]').forEach(el => { el.innerHTML = icon(el.dataset.icon); }); }
+const projects = [
+  {id:'aira', name:'Aira', category:'exploration', type:'AI SYSTEM ARCHITECTURE', status:'Architecting · Pre-MVP', description:'A user-owned context and memory layer that travels across AI tools.', tags:['Python','SQLite + FTS5','Vector retrieval','MCP','System design'], details:'I’m architecting Aira: a local-first memory and context layer that lets AI tools work from a shared, user-controlled understanding of preferences, projects, and decisions. I defined the system boundaries, memory model, retrieval pipeline, and phased MVP plan.', bullets:['Architecture: one local daemon, with REST, MCP, and hooks as thin integration surfaces. A provider-independent core separates business logic from model adapters.','Memory model: typed, scoped, versioned records with provenance, confidence, supersession, and an auditable lifecycle. Raw conversations remain separate from canonical memory.','Retrieval: combine SQLite FTS5 and vector search, fuse and rank candidates, diversify results, and assemble context within a token budget.','Privacy: exclude disallowed scopes before retrieval; design explicit grants, private sessions, and reviewable injection logs into the system.','Roadmap: establish portable memory and inspectable context first, then expand into browser integrations, editor awareness, and encrypted sync.'], note:'Architecture and MVP design in progress. Implementation and release follow the phased plan.'},
+  {id:'ml-uikit', name:'ml-uikit', category:'open-source', type:'COMPONENT LIBRARY', status:'Published on npm', description:'Reusable React building blocks for consistent, considered interfaces.', tags:['React','Storybook','shadcn/ui'], art:'uikit', details:'A reusable UI component library developed at Metis Labs and published on npm. My work focused on components that improve consistency and reduce repeated interface development across applications.', bullets:['React and TypeScript component foundations.','Tailwind CSS and shadcn/ui design patterns.','Storybook for component development and testing.'], url:'https://libraries.io/npm/ml-uikit', linkLabel:'Explore package'},
+  {id:'bug-buster', name:'Bug Buster', category:'product', type:'DEVELOPER TOOL', status:'AI automation', description:'Connecting Jira and AI to simplify repetitive bug-analysis workflows.', tags:['OpenAI API','Jira','Automation'], art:'bugbuster', details:'An AI-powered Jira automation tool designed to help analyze and resolve bugs, reducing repetitive debugging work and improving developer turnaround.', bullets:['Jira integration for bug-analysis workflows.','OpenAI API integration for AI-assisted resolution.','Automation focused on repetitive debugging tasks.'], note:'Project described in my résumé. Public demo and source are not currently linked.'},
+  {id:'sci-webhub', name:'Sci-WebHub', category:'open-source', type:'DEPLOYMENT PLATFORM', status:'Public repository', description:'From a GitHub repository to a tracked deployment, with less friction.', tags:['Next.js','Node.js','PostgreSQL'], art:'webhub', details:'A web deployment and hosting project with backend infrastructure for automated deployments through GitHub repository integrations.', bullets:['API services for builds, deployment tracking, and environment configuration.','Database schema for deployments, logs, and version history.','Backend infrastructure to coordinate repository-based deployments.'], url:'https://github.com/kushwaha971/Sci-webhub', linkLabel:'View repository'}
+];
+const grid = document.querySelector('#project-grid');
+function renderProjects(filter='all') {
+ grid.innerHTML = projects.filter(p => filter==='all'||p.category===filter).map((p,index)=>`<details class="project-row" id="project-${p.id}" ${index<2?'open':''}><summary><span class="project-symbol">${({'aira':'aı','ml-uikit':'ui','bug-buster':'✳','sci-webhub':'⌘'})[p.id]}</span><span><h3>${p.name}</h3><p>${p.status}</p></span>${icon('chevron-down')}</summary><div class="project-content"><p>${p.details}</p><strong>Featured:</strong><ul>${p.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>${p.note?`<p class="project-note">${p.note}</p>`:''}<div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div>${p.url?`<a class="text-link" href="${p.url}" target="_blank" rel="noopener noreferrer">${p.linkLabel} ↗</a>`:''}</div></details>`).join('');
+}
+const projectDialog = document.querySelector('#project-dialog');
+function openProject(id) {
+ const p = projects.find(p=>p.id===id);
+ document.querySelector('#project-detail').innerHTML = `<span class="eyebrow">${p.type} · ${p.status}</span><h2 id="project-dialog-title">${p.name}</h2><p>${p.details}</p><ul>${p.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>${p.note?`<p class="project-note">${p.note}</p>`:''}${p.url?`<a class="button primary" href="${p.url}" target="_blank" rel="noopener noreferrer">${p.linkLabel}${icon('arrow-up-right')}</a>`:''}`;
+ projectDialog.showModal();
+}
+renderProjects();
+document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});renderProjects(button.dataset.filter);}));
+document.querySelector('#project-close').addEventListener('click',()=>projectDialog.close());
+
+const notes=[
+ ['01','Why use a policy layer before AI memory retrieval?','Aira · Architecture decisions','Aira’s design filters out disallowed scopes before retrieving candidate memories. This separates permission checks from relevance scoring: a highly relevant private memory must still be excluded. The proposed context package records why each selected memory was included.'],
+ ['02','How do you prevent stale search results?','Application reliability · Study note','When requests finish out of order, an older response can overwrite a newer result. Abort the previous fetch with AbortController and guard state updates with a request identifier. Cancellation saves work; the identifier ensures only the latest request can update the interface.'],
+ ['03','What makes a reusable component useful?','Frontend · Design systems','Start with a clear API, accessible semantics, and predictable states. Keep domain-specific behavior outside the primitive, support composition, and document loading, empty, error, and disabled states. Storybook helps make these cases visible to the team.'],
+ ['04','How would you approach a slow application?','Performance · Engineering approach','Reproduce the issue and measure a specific interaction before changing code. Use browser profiling to separate network time, long tasks, rendering, and expensive component updates. Make a targeted change, then compare the same scenario. Memoization and lazy loading help only when they address the measured bottleneck.']
+];
+document.querySelector('#learning-notes').innerHTML=notes.map(([n,q,topic,a])=>`<details class="learning-note"><summary><span class="note-number">${n}</span><span><strong>${q}</strong><small>${topic}</small></span>${icon('plus')}</summary><p>${a}</p></details>`).join('');
+
+const linkedinSection=document.createElement('div');
+linkedinSection.className='linkedin-post';
+linkedinSection.innerHTML=`<div><span class="eyebrow">FEATURED ON LINKEDIN</span><h3>A post from my feed</h3><p>Work and ideas, shared in public.</p></div><a class="button" href="https://www.linkedin.com/feed/update/urn:li:activity:7433204217307254784/" target="_blank" rel="noopener noreferrer">Read the post ${icon('arrow-up-right')}</a><details id="linkedin-embed"><summary>Show LinkedIn post ${icon('chevron-down')}</summary><p class="embed-note">If LinkedIn doesn’t display the post, use “Read the post” above.</p><div id="linkedin-frame"></div></details>`;
+document.querySelector('.linkedin-feature').before(linkedinSection);
+document.querySelector('#linkedin-embed').addEventListener('toggle',e=>{if(e.target.open&&!document.querySelector('#linkedin-frame iframe')){const frame=document.createElement('iframe');frame.src='https://www.linkedin.com/embed/feed/update/urn:li:activity:7433204217307254784';frame.title='Akash Kushwaha’s featured LinkedIn post';frame.height='580';frame.loading='lazy';document.querySelector('#linkedin-frame').append(frame);}});
+
+const themeButton=document.querySelector('#theme-toggle');
+function updateThemeButton(){const dark=document.documentElement.dataset.theme==='dark';themeButton.innerHTML=icon(dark?'moon':'sun');themeButton.setAttribute('aria-label',`Switch to ${dark?'light':'dark'} theme`);document.querySelector('meta[name="theme-color"]').content=dark?'#09090b':'#ffffff';}
+hydrateIcons();updateThemeButton();
+themeButton.addEventListener('click',()=>{document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('akash-theme',document.documentElement.dataset.theme);}catch{}updateThemeButton();});
+function updateClock(){document.querySelector('#india-time').textContent=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit'}).format(new Date());}updateClock();setInterval(updateClock,60000);document.querySelector('#year').textContent=new Date().getFullYear();
+let toastTimer;
+function toast(message){const el=document.querySelector('#toast');el.textContent=message;el.classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('visible'),3200);}
+document.querySelector('#copy-install').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('npm install ml-uikit');toast('Install command copied.');}catch{toast('Copy this command: npm install ml-uikit');}});
+document.querySelector('#demo-action').addEventListener('click',()=>{document.querySelector('#demo-status').textContent='Something good is starting';toast('A small interaction. A good place to start.');});
+document.querySelector('#demo-save').setAttribute('aria-pressed','false');
+document.querySelector('#demo-save').addEventListener('click',e=>{const b=e.currentTarget;const saved=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(saved));b.innerHTML=icon(saved?'check':'bookmark')+(saved?'Saved for later':'Save for later');});
+document.querySelector('.switch').addEventListener('click',e=>{const b=e.currentTarget;const on=b.getAttribute('aria-checked')!=='true';b.setAttribute('aria-checked',String(on));toast(`Demo notifications ${on?'enabled':'disabled'}.`);});
+const searchDialog=document.querySelector('#search-dialog');
+const searchInput=document.querySelector('#search-input');
+const searchItems=[...['About','Work','Components','Experience','Stack','Writing','Learning','Contact'].map(name=>({name,url:`#${name.toLowerCase()}`,label:'Section'})),...projects.map(p=>({name:p.name,project:p.id,label:'Project'})),{name:'BrandHub — The Branding Club',url:'#brandhub-experience',label:'Experience'},{name:'Hire me / WhatsApp',url:'#contact',label:'Contact'},{name:'Résumé',url:'/Akash_Resume.pdf',label:'PDF'},{name:'LinkedIn post',url:'https://www.linkedin.com/feed/update/urn:li:activity:7433204217307254784/',label:'Social'}];
+function renderSearch(){const items=searchItems.filter(i=>`${i.name} ${i.label}`.toLowerCase().includes(searchInput.value.toLowerCase()));const results=document.querySelector('#search-results');results.replaceChildren();if(!items.length){const empty=document.createElement('p');empty.className='search-empty';empty.textContent='No matches. Try “Aira”, “work”, or “résumé”.';results.append(empty);}items.forEach(i=>{const el=document.createElement(i.project?'button':'a');el.className='search-result';el.innerHTML=`<span>${i.name}</span><small>${i.label} ↗</small>`;if(i.url)el.href=i.url;el.addEventListener('click',()=>{searchDialog.close();if(i.project)openProject(i.project);});results.append(el);});}
+function openSearch(){searchInput.value='';renderSearch();searchDialog.showModal();searchInput.focus();}
+document.querySelector('#search-open').addEventListener('click',openSearch);document.querySelector('#search-close').addEventListener('click',()=>searchDialog.close());searchInput.addEventListener('input',renderSearch);searchInput.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();document.querySelector('.search-result')?.click();}});
+document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();if(projectDialog.open)projectDialog.close();searchDialog.open?searchDialog.close():openSearch();}});
+[projectDialog,searchDialog].forEach(dialog=>dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}}));
+
+import contributionData from './contributions.json';
+const chart=document.querySelector('#contribution-chart');
+const monthLabels=document.createElement('div');monthLabels.className='chart-months';
+monthLabels.innerHTML=['Sep','Oct','Nov','Dec','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep'].map(m=>`<span>${m}</span>`).join('');
+const cells=document.createElement('div');cells.className='contribution-chart';cells.setAttribute('role','img');cells.setAttribute('aria-label',`${contributionData.total} public contributions in the last year, captured September 11, 2026`);
+contributionData.days.forEach(day=>{const cell=document.createElement('i');cell.dataset.level=day.level;cell.title=`${day.date}: ${day.level?'Public contribution activity':'No public contributions'}`;cells.append(cell);});chart.append(monthLabels,cells);document.querySelector('#contribution-count').textContent=contributionData.total;
+const stackGroups=[['Language',[['TypeScript','typescript/typescript-original.svg','#3178c6'],['JavaScript','javascript/javascript-original.svg','#e5b800'],['Python','python/python-original.svg','#3776ab']]],['State management',[['Redux','redux/redux-original.svg','#764abc']]],['Runtime environment',[['Node.js','nodejs/nodejs-original.svg','#5fa04e']]],['Database',[['PostgreSQL','postgresql/postgresql-original.svg','#4169e1'],['MongoDB','mongodb/mongodb-original.svg','#47a248'],['MySQL','mysql/mysql-original.svg','#4479a1']]],['Framework',[['Next.js','nextjs/nextjs-original.svg','#888'],['Tailwind CSS','tailwindcss/tailwindcss-original.svg','#06b6d4'],['Express','express/express-original.svg','#888'],['Django','django/django-plain.svg','#44b78b']]],['Version control',[['Git','git/git-original.svg','#f05032']]],['Library',[['React','react/react-original.svg','#61dafb'],['Storybook','storybook/storybook-original.svg','#ff4785']]],['Tools',[['VS Code','vscode/vscode-original.svg','#007acc'],['Figma','figma/figma-original.svg','#f24e1e']]]];
+document.querySelector('#stack-grid').innerHTML=stackGroups.map(([name,items])=>`<div class="stack-group"><h3>${name}</h3><div class="stack-icons">${items.map(([name,path,color])=>`<span class="tech-icon" style="--color:${color}" title="${name}"><img src="/stack/${path.split('/')[0]}.svg" alt="${name}" loading="lazy" width="30" height="30"/></span>`).join('')}</div></div>`).join('');
+document.querySelectorAll('[data-demo]').forEach(button=>button.addEventListener('click',()=>{const playground=document.querySelector('#component-playground');playground.open=true;playground.scrollIntoView({behavior:'smooth',block:'center'});const target={buttons:'#demo-action',status:'#demo-action',switch:'.switch'}[button.dataset.demo];document.querySelector(target).focus({preventScroll:true});}));document.querySelector('#command-demo').addEventListener('click',openSearch);
+window.addEventListener('scroll',()=>document.querySelector('.site-header').classList.toggle('scrolled',scrollY>160),{passive:true});
+
+const contactForm = document.querySelector('#contact-form');
+contactForm.addEventListener('submit', event => {
+  event.preventDefault();
+  const data = new FormData(contactForm);
+  const name = String(data.get('name')).trim();
+  const message = String(data.get('message')).trim();
+  if (!name || !message) { toast('Please add your name and a message.'); return; }
+  const text = `Hi Akash, I’m ${name}.\n\n${data.get('intent')}\n\n${message}`;
+  document.querySelector('#contact-whatsapp').href = `https://wa.me/919794620535?text=${encodeURIComponent(text)}`;
+  document.querySelector('#contact-ready').hidden = false;
+  document.querySelector('#contact-whatsapp').focus();
+});
+contactForm.addEventListener('input', () => {
+  document.querySelector('#contact-ready').hidden = true;
+  document.querySelector('#contact-whatsapp').removeAttribute('href');
+});

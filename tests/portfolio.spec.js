@@ -4,7 +4,7 @@ test('reference layout, project filters, search, and theme work',async({page})=>
  await page.goto('/');
  await expect(page.getByRole('heading',{name:'Akash Kushwaha',exact:true})).toBeVisible();
  await expect(page.locator('.cover')).toHaveCSS('height','256px');
- await expect(page.locator('.project-row')).toHaveCount(4);
+ await expect(page.locator('.project-row')).toHaveCount(5);
  await page.getByRole('button',{name:'Explorations',exact:true}).click();
  await expect(page.locator('.project-row')).toHaveCount(1);
  await expect(page.locator('#project-aira')).toContainText('Pre-MVP');
@@ -53,7 +53,7 @@ test('full-stack profile and WhatsApp enquiry flow',async({page})=>{
  await expect(page.locator('#brandhub-experience')).toContainText('The Branding Club');
  await expect(page.locator('#project-grid')).not.toContainText('BrandHub');
  await expect(page.locator('#experience')).toContainText('AWS EC2');
- await expect(page.locator('#experience')).toContainText('40%');
+ await expect(page.locator('#experience')).toContainText('50%');
  await expect(page.getByRole('link',{name:'Machli · Google Play'})).toHaveAttribute('href',/id=ai.rfis.machli/);
  await expect(page.locator('footer')).not.toContainText('Design reference');
  await expect(page.locator('#contact-ready')).toBeHidden();

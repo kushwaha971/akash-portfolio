@@ -22,3 +22,5 @@
 .calendar-layout .contribution-chart i[data-level="3"],.contribution-legend i:nth-child(4){background:#26a641}
 .calendar-layout .contribution-chart i[data-level="4"],.contribution-legend i:nth-child(5){background:#39d353}
 .contribution-caption{padding-top:12px}.contribution-legend i{border-radius:3px}
+
+.project-role-preview{display:block;color:var(--muted);font:10px/17px var(--mono);margin-top:5px}.project-ownership{padding:16px;margin:18px 0;background:var(--soft);border:1px solid var(--line);border-left:3px solid #22c55e;border-radius:6px}.project-ownership>span{font:10px/18px var(--mono);letter-spacing:1px;color:var(--muted)}.project-ownership p{margin:4px 0 14px!important}.project-ownership p:last-child{margin-bottom:0!important}

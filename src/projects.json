@@ -50,7 +50,11 @@
       "Redux",
       "Node.js"
     ],
-    "url": null
+    "url": null,
+    "categories": [
+      "ai",
+      "product"
+    ]
   },
   {
     "id": "nse-india",

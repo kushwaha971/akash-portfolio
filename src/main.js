@@ -8,7 +8,7 @@ if (menu) {
 }
 for(const link of document.querySelectorAll('.desktop-nav a')) { if(location.pathname.replace(/\/$/,'')===new URL(link.href).pathname.replace(/\/$/,''))link.setAttribute('aria-current','page'); }
 const filters=[...document.querySelectorAll('[data-filter]')];
-for(const b of filters)b.addEventListener('click',()=>{for(const f of filters)f.setAttribute('aria-pressed',String(f===b));for(const card of document.querySelectorAll('[data-category]'))card.hidden=b.dataset.filter!=='all'&&card.dataset.category!==b.dataset.filter;});
+for(const b of filters)b.addEventListener('click',()=>{for(const f of filters)f.setAttribute('aria-pressed',String(f===b));for(const card of document.querySelectorAll('[data-category]'))card.hidden=b.dataset.filter!=='all'&&!card.dataset.category.split(/\s+/).includes(b.dataset.filter);});
 let topic='All';
 function filterPosts(){const q=(document.querySelector('#blog-search')?.value||'').toLowerCase();let count=0;for(const post of document.querySelectorAll('[data-post]')){post.hidden=(topic!=='All'&&post.dataset.topic!==topic)||!post.textContent.toLowerCase().includes(q);if(!post.hidden)count++;}const state=document.querySelector('#post-results');if(state)state.textContent=count?'':'No matching posts. Try another topic or search.';}
 for(const b of document.querySelectorAll('[data-blog-filter]'))b.addEventListener('click',()=>{topic=b.dataset.blogFilter;for(const f of document.querySelectorAll('[data-blog-filter]'))f.setAttribute('aria-pressed',String(f===b));filterPosts();});

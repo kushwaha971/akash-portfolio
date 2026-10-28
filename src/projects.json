@@ -59,7 +59,7 @@
   {
     "id": "nse-india",
     "title": "NSE / Corpository",
-    "role": "Software Development Engineer I · Onelab Ventures",
+    "role": "Software Development Engineer I · Full-stack development at Onelab Ventures",
     "category": "client",
     "categoryLabel": "ONELAB VENTURES · CLIENT PROJECT",
     "status": "Work at Onelab Ventures · 2023–2024",
@@ -67,6 +67,7 @@
     "overview": "I worked on NSE / Corpository while employed at Onelab Ventures as a Software Development Engineer I. Client delivery for enterprise information workflows through Onelab Ventures.",
     "challenge": "Enterprise users need reliable access to structured information, with clear permissions, validation and predictable application behaviour.",
     "built": [
+      "Worked across React.js frontend features and Node.js backend services, integrating Oracle Database-backed workflows and supporting on-premises deployment.",
       "Contributed to application features and API-backed workflows as part of the Onelab delivery team.",
       "Worked on validation, administrative interfaces, integration and debugging across the client application.",
       "Supported production troubleshooting and release work, including on-premise deployment requirements."
@@ -94,7 +95,7 @@
   {
     "id": "kisangrow",
     "title": "KisanGrow",
-    "role": "Software Development Engineer I · Onelab Ventures",
+    "role": "Software Development Engineer I · Full-stack development at Onelab Ventures",
     "category": "client",
     "categoryLabel": "ONELAB VENTURES · CLIENT PROJECT",
     "status": "Work at Onelab Ventures · 2023–2024",
@@ -102,6 +103,7 @@
     "overview": "I worked on KisanGrow while employed at Onelab Ventures as a Software Development Engineer I. KisanGrow is a Reliance Foundation Information Services content application for farmers, fisherfolk and livestock owners.",
     "challenge": "Content-led applications need clear navigation, usable interfaces and reliable information delivery across different user needs.",
     "built": [
+      "Worked on both the React Native application and Node.js backend, integrating APIs and data workflows using MySQL and MongoDB in an Azure environment.",
       "Contributed to client application delivery through Onelab Ventures, working with the team on application workflows and API integration.",
       "Worked on interface behaviour, validation, debugging and improvements during feature delivery.",
       "Collaborated on release support and issue resolution for the client engagement."
@@ -130,7 +132,7 @@
   {
     "id": "machli",
     "title": "Machli",
-    "role": "Software Development Engineer I · Onelab Ventures",
+    "role": "Software Development Engineer I · Full-stack development at Onelab Ventures",
     "category": "client",
     "categoryLabel": "ONELAB VENTURES · CLIENT PROJECT",
     "status": "Work at Onelab Ventures · 2023–2024",
@@ -138,6 +140,7 @@
     "overview": "I worked on Machli while employed at Onelab Ventures as a Software Development Engineer I. Machli is a Reliance Foundation Information Services application providing ocean-state forecasts and potential fishing-zone information in eight Indian languages.",
     "challenge": "Marine information needs to be presented clearly for users across languages and locations. The application brings forecasts and advisory information into a usable mobile experience.",
     "built": [
+      "Contributed across the React Native application and Node.js backend, connecting application workflows with MySQL and MongoDB-backed services in an Azure environment.",
       "Worked on the Machli client engagement as part of the Onelab Ventures engineering team.",
       "Contributed to application workflows, integrations, debugging and feature delivery with the client team.",
       "Supported application quality and release-related troubleshooting."
@@ -166,7 +169,7 @@
   {
     "id": "complimate",
     "title": "Complimate",
-    "role": "Software Development Engineer I · Onelab Ventures",
+    "role": "Software Development Engineer I · Full-stack development at Onelab Ventures",
     "category": "client",
     "categoryLabel": "ONELAB VENTURES · CLIENT PROJECT",
     "status": "Work at Onelab Ventures · 2023–2024",
@@ -174,6 +177,7 @@
     "overview": "I worked on Complimate while employed at Onelab Ventures as a Software Development Engineer I. Complimate is a compliance management product bringing client records, documents, obligations and coordination into a shared workspace.",
     "challenge": "Compliance workflows require structured records, predictable access and clear task states. Interface and API behaviour must help users manage detailed information without losing context.",
     "built": [
+      "Worked across the React.js frontend and Node.js backend, integrating application workflows with PostgreSQL through Sequelize and supporting AWS delivery.",
       "Contributed to the Complimate client engagement at Onelab Ventures.",
       "Worked on API-backed application workflows, validation and administrative functionality.",
       "Collaborated with the delivery team on debugging, maintainability and production support."

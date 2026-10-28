@@ -37,3 +37,9 @@ This site uses Vite. From this directory, install dependencies with npm install,
 
 Résumé content and project descriptions reflect the profile information and confirmed work details supplied for this portfolio. No customer-sensitive code, screenshots, credentials, or private project data are published.
 
+
+## Pages and preview
+
+Run `npm run dev` and open `http://127.0.0.1:5173/` to preview the portfolio. Opening the source HTML through `file://` does not run the Vite application.
+
+The site includes `/work/`, `/about/`, `/blog/`, `/contact/`, and `/work/<project>/` case-study pages. The production build creates HTML entries for these routes so direct navigation and refresh work on static hosting. Deploy the generated `dist/` directory.

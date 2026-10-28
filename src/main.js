@@ -1,4 +1,3 @@
-import './style.css';
 
 const iconPaths = {
   search: '<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/>',
@@ -198,10 +197,8 @@ function renderProjects(filter) {
     const top = make('div', 'case-card-top');
     top.append(make('span', 'case-number', project.number), make('span', 'case-category', project.categoryLabel));
     card.append(top, make('h3', '', project.title), make('p', 'case-role', project.role), make('p', 'case-summary', project.summary), metricList(project.metrics), tagList(project.stack));
-    const view = make('button', 'case-action', 'Explore case study');
-    view.type = 'button';
-    view.setAttribute('aria-haspopup', 'dialog');
-    view.addEventListener('click', function () { openProject(project.id); });
+    const view = make('a', 'case-action', 'Explore case study');
+    view.href = '/work/' + project.id + '/';
     view.append(icon('arrow'));
     card.append(view);
     if (project.url) {
@@ -224,32 +221,7 @@ function caseSection(title, body, bullets) {
   }
   return section;
 }
-function openProject(projectId) {
-  const project = projects.find(function (item) { return item.id === projectId; });
-  if (!project) return;
-  projectDetail.replaceChildren();
-  const header = make('div', 'case-detail-header');
-  const close = make('button', 'icon-button case-close', '×');
-  close.type = 'button';
-  close.setAttribute('aria-label', 'Close case study');
-  close.addEventListener('click', function () { projectDialog.close(); });
-  header.append(make('p', 'eyebrow', 'CASE STUDY ' + project.number + ' · ' + project.categoryLabel), close);
-  projectDetail.append(header, make('h2', 'case-detail-title', project.title), make('p', 'case-detail-role', project.role), make('p', 'case-detail-status', project.status), metricList(project.metrics));
-  projectDetail.append(caseSection('OVERVIEW', project.overview), caseSection('THE CHALLENGE', project.challenge), caseSection('WHAT I BUILT', '', project.built), caseSection('TRADE-OFFS & OUTCOME', project.tradeoff));
-  const tech = make('section', 'case-detail-section');
-  tech.append(make('p', 'case-detail-label', 'TECH STACK'), tagList(project.stack));
-  projectDetail.append(tech);
-  if (project.note) projectDetail.append(make('p', 'project-note', project.note));
-  if (project.url) {
-    const link = make('a', 'button primary case-detail-link', project.linkLabel);
-    link.href = project.url;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    link.append(icon('arrow'));
-    projectDetail.append(link);
-  }
-  if (!projectDialog.open) projectDialog.showModal();
-}
+function openProject(projectId) { window.location.assign('/work/' + projectId + '/'); }
 renderProjects('all');
 document.querySelectorAll('[data-filter]').forEach(function (button) {
   button.addEventListener('click', function () {
@@ -395,3 +367,59 @@ document.querySelector('#contribution-snapshot').textContent = 'Public GitHub ac
 
 document.querySelectorAll('.stack-group').forEach(function (group) { /* stack tags are static */ });
 
+
+// Each case study has its own address and refreshable production HTML entry.
+const route = location.pathname.replace(/\/+$/, '') || '/';
+const main = document.querySelector('#main');
+const footer = document.querySelector('.site-footer');
+function pageHeading(kicker, title, description) {
+  const head = make('header', 'route-heading page-shell');
+  const back = make('a', 'route-back', '← Back to home'); back.href = '/';
+  head.append(back, make('p', 'eyebrow', kicker), make('h1', '', title), make('p', 'route-description', description));
+  return head;
+}
+if (route.startsWith('/work/')) {
+  const project = projects.find(item => item.id === route.split('/')[2]);
+  if (project) {
+    document.title = project.title + ' — Case Study | Akash Kushwaha';
+    const heading = pageHeading(project.categoryLabel, project.title, project.overview);
+    heading.querySelector('.route-back').href = '/work/';
+    heading.querySelector('.route-back').textContent = '← All case studies';
+    heading.append(make('p', 'case-detail-role', project.role), make('p', 'case-detail-status', project.status), metricList(project.metrics));
+    const layout = make('div', 'case-page-layout page-shell');
+    const aside = make('aside', 'case-page-aside');
+    aside.append(make('p', 'case-detail-label', 'IN THIS CASE STUDY'));
+    const content = make('article', 'case-page-content');
+    [['The challenge', project.challenge], ['What I built', '', project.built], ['Trade-offs & outcome', project.tradeoff]].forEach(([title, body, bullets], index) => {
+      const section = caseSection(title, body, bullets); section.id = 'chapter-' + index;
+      const link = make('a', '', title); link.href = '#' + section.id; aside.append(link); content.append(section);
+    });
+    const tech = caseSection('Technology', ''); tech.append(tagList(project.stack)); content.append(tech);
+    if (project.note) content.append(make('p', 'project-note', project.note));
+    if (project.url) { const link = make('a', 'button primary', project.linkLabel + ' ↗'); link.href = project.url; link.target = '_blank'; link.rel = 'noopener noreferrer'; content.append(link); }
+    layout.append(aside, content);
+    const next = projects[(projects.indexOf(project) + 1) % projects.length];
+    const nextLink = make('a', 'next-case page-shell', 'Next case study: ' + next.title + ' ↗'); nextLink.href = '/work/' + next.id + '/';
+    main.replaceChildren(heading, layout, nextLink, footer);
+  }
+} else if (route !== '/') {
+  const pages = {
+    '/work': ['SELECTED WORK', 'Work & case studies.', 'A closer look at the problems, decisions and engineering behind my work.', ['work']],
+    '/about': ['ABOUT AKASH', 'Engineering with ownership.', 'Senior Software Engineer · AI-Native Full-Stack Engineer. Four years building production applications and useful AI workflows.', ['about', 'experience', 'stack']],
+    '/blog': ['WRITING', 'Notes from building.', 'Practical lessons from shipping products, exploring AI and working with the web.', ['writing']],
+    '/contact': ['LET’S CONNECT', 'Let’s build something useful.', 'Open to engineering opportunities and conversations about practical AI products.', ['contact']]
+  };
+  const page = pages[route];
+  if (page) {
+    document.title = page[1] + ' | Akash Kushwaha';
+    const sections = page[3].map(id => document.getElementById(id));
+    main.replaceChildren(pageHeading(page[0], page[1], page[2]), ...sections, footer);
+  } else {
+    main.replaceChildren(pageHeading('404', 'Page not found.', 'Follow the navigation to explore my work.'), footer);
+  }
+}
+document.querySelectorAll('nav a').forEach(link => {
+  const active = route === link.pathname.replace(/\/+$/, '') || (route.startsWith('/work/') && link.pathname === '/work/');
+  link.classList.toggle('nav-active', active); if (active) link.setAttribute('aria-current', 'page');
+});
+hydrateIcons();

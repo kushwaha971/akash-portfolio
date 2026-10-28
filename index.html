@@ -11,18 +11,19 @@
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <script>try{document.documentElement.dataset.theme=localStorage.getItem('akash-theme')||'dark'}catch{}</script>
+  <link rel="stylesheet" href="/src/style.css">
   <script type="module" src="/src/main.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="nav-inner">
-    <a class="brand" href="#home" aria-label="Akash Kushwaha home"><span class="brand-mark">ak<span>.</span></span><span class="brand-name">AKASH<br>KUSHWAHA</span></a>
-    <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#writing">Writing</a><a href="#about">About</a></nav>
+    <a class="brand" href="/" aria-label="Akash Kushwaha home"><span class="brand-mark">ak<span>.</span></span><span class="brand-name">AKASH<br>KUSHWAHA</span></a>
+    <nav aria-label="Main navigation"><a href="/work/">Work</a><a href="/about/">About</a><a href="/blog/">Blog</a><a href="/contact/">Contact</a></nav>
     <div class="nav-actions">
       <button class="icon-button search-trigger" id="search-open" aria-label="Search portfolio"><span data-icon="search"></span><kbd>⌘ K</kbd></button>
       <button class="icon-button" id="theme-toggle" aria-label="Switch theme"><span data-icon="sun"></span></button>
-      <a class="nav-cta" href="#contact">Let’s talk <span data-icon="arrow-up-right"></span></a>
+      <a class="nav-cta" href="/contact/">Let’s talk <span data-icon="arrow-up-right"></span></a>
     </div>
   </div>
 </header>
@@ -166,7 +167,7 @@
     </div>
   </section>
 
-  <footer class="site-footer page-shell"><p>Built by Akash Kushwaha · <span id="india-time"></span> IST</p><div><a href="/Akash_A_Resume.pdf" target="_blank" rel="noopener">AI Full-Stack résumé</a><a href="/Akash_F_Resume.pdf" target="_blank" rel="noopener">Frontend résumé</a><a href="#home">Back to top ↑</a></div><span class="footer-mark" aria-hidden="true">AK.</span></footer>
+  <footer class="site-footer page-shell"><p>Built by Akash Kushwaha · <span id="india-time"></span> IST</p><div><a href="/Akash_A_Resume.pdf" target="_blank" rel="noopener">AI Full-Stack résumé</a><a href="/Akash_F_Resume.pdf" target="_blank" rel="noopener">Frontend résumé</a><a href="/">Back to top ↑</a></div><span class="footer-mark" aria-hidden="true">AK.</span></footer>
 </main>
 
 <dialog id="search-dialog" aria-labelledby="search-title"><div class="search-dialog-head"><span data-icon="search"></span><label class="sr-only" id="search-title" for="search-input">Search portfolio</label><input id="search-input" type="search" placeholder="Find a project, section, or skill…" autocomplete="off"><button class="icon-button" id="search-close" aria-label="Close search">Esc</button></div><div id="search-results"></div><div class="search-footer">Search with a keyword <span>↵ to open</span></div></dialog>

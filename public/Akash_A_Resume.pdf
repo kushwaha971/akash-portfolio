@@ -1,0 +1,866 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<<
+/Producer (pypdf)
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Count 1
+/Kids [ 4 0 R ]
+>>
+endobj
+3 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+4 0 obj
+<<
+/Contents 5 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Resources <<
+/Font 6 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Parent 2 0 R
+>>
+endobj
+5 0 obj
+<<
+/Length 11440
+>>
+stream
+1 0 0 1 0 0 cm
+BT
+/F1 12 Tf
+14.4 TL
+ET
+q
+1 0 0 1 31 797.8898 cm
+q
+0.090196 0.168627 0.301961 rg
+BT
+1 0 0 1 0 2 Tm
+/F2 21 Tf
+23 TL
+(AKASH KUMAR KUSHWAHA) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 783.8898 cm
+q
+0.058824 0.462745 0.431373 rg
+BT
+1 0 0 1 0 2 Tm
+/F2 11 Tf
+13 TL
+(AI FULL\055STACK ENGINEER \174 AI ENGINEER) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 772.6898 cm
+q
+0.270588 0.329412 0.407843 rg
+BT
+1 0 0 1 0 1.6 Tm
+/F1 8.6 Tf
+10.2 TL
+(AI\055NATIVE B2B SAAS) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 752.0898 cm
+q
+0.270588 0.329412 0.407843 rg
+BT
+1 0 0 1 0 10.7 Tm
+/F1 7.9 Tf
+9.3 TL
+(India \174 \05391 9794620535 \174 kushwahaakash971\100gmail\056com) Tj
+T*
+(LinkedIn\072 linkedin\056com\057in\057akash\055kushwaha\055250949224 \174 GitHub\072 github\056com\057kushwaha971\057kushwaha971) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 736.0898 cm
+q
+0.090196 0.168627 0.301961 rg
+BT
+1 0 0 1 0 1.3 Tm
+/F2 9.7 Tf
+11 TL
+(PROFESSIONAL SUMMARY) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 733.5398 cm
+q
+0.55 w
+1 J
+0.72549 0.776471 0.835294 RG
+n
+0 0 m
+533.2756 0 l
+S
+Q
+Q
+q
+1 0 0 1 31 699.7398 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 23.1 Tm
+/F1 8.7 Tf
+10.6 TL
+(AI\055focused full\055stack engineer with 4 years of experience delivering production SaaS and LLM\055enabled workflows\056 At The Branding Club\054) Tj
+T*
+(build BrandHub ordering\054 billing and API features and a production RAG assistant grounded in business data\056 Also independently built) Tj
+T*
+(YourKhata and configured an AI\055assisted job\055application workflow\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 683.7398 cm
+q
+0.090196 0.168627 0.301961 rg
+BT
+1 0 0 1 0 1.3 Tm
+/F2 9.7 Tf
+11 TL
+(TECHNICAL SKILLS) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 681.1898 cm
+q
+0.55 w
+1 J
+0.72549 0.776471 0.835294 RG
+n
+0 0 m
+533.2756 0 l
+S
+Q
+Q
+q
+1 0 0 1 31 669.4898 cm
+q
+BT
+1 0 0 1 0 1.6 Tm
+9.7 TL
+/F2 8.1 Tf
+0 0 0 rg
+(AI \046 Generative AI\072) Tj
+/F1 8.1 Tf
+( LLM orchestration\054 RAG\054 vector search\054 LangChain\054 OpenAI\057Gemini APIs\054 prompt engineering\054 agents\054 MCP) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 658.9898 cm
+q
+BT
+1 0 0 1 0 1.6 Tm
+9.7 TL
+/F2 8.1 Tf
+0 0 0 rg
+(Languages \046 Backend\072) Tj
+/F1 8.1 Tf
+( Python\054 TypeScript\054 JavaScript\054 SQL\054 Node\056js\054 Express\056js\054 Django\054 Django REST Framework\054 FastAPI\054 REST APIs) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 648.4898 cm
+q
+BT
+1 0 0 1 0 1.6 Tm
+9.7 TL
+/F2 8.1 Tf
+0 0 0 rg
+(Frontend\072) Tj
+/F1 8.1 Tf
+( React\054 Next\056js SSR\054 Redux Toolkit\054 Tailwind CSS\054 Material UI\054 shadcn\057ui\054 Storybook) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 637.9898 cm
+q
+BT
+1 0 0 1 0 1.6 Tm
+9.7 TL
+/F2 8.1 Tf
+0 0 0 rg
+(Data \046 Delivery\072) Tj
+/F1 8.1 Tf
+( PostgreSQL\054 MongoDB\054 MySQL\054 multi\055tenant SaaS\054 Docker\054 Railway\054 Nginx\054 edge caching\054 Git\057GitHub\054 CI\057CD) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 627.4898 cm
+q
+BT
+1 0 0 1 0 1.6 Tm
+9.7 TL
+/F2 8.1 Tf
+0 0 0 rg
+(SEO \046 GEO\072) Tj
+/F1 8.1 Tf
+( Performance\054 Core Web Vitals\054 metadata\054 canonicals\054 sitemap\057robots\054 FAQ JSON\055LD\054 Search Console\054 GA4) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 611.4898 cm
+q
+0.090196 0.168627 0.301961 rg
+BT
+1 0 0 1 0 1.3 Tm
+/F2 9.7 Tf
+11 TL
+(PROFESSIONAL EXPERIENCE) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 608.9398 cm
+q
+0.55 w
+1 J
+0.72549 0.776471 0.835294 RG
+n
+0 0 m
+533.2756 0 l
+S
+Q
+Q
+q
+1 0 0 1 31 596.9398 cm
+q
+BT
+1 0 0 1 0 1.6 Tm
+10 TL
+/F2 8.4 Tf
+0 0 0 rg
+(Software Engineer II \050L2\051 \174 The Branding Club) Tj
+/F1 8.4 Tf
+(   ) Tj
+0.270588 0.329412 0.407843 rg
+(Aug 2024 \055 Present) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 576.3398 cm
+q
+BT
+1 0 0 1 10 11.6 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Deliver ordering and billing workflows for BrandHub\054 a multi\055tenant B2B order\055management and fulfilment platform serving 8\054000\053 brands across) Tj
+T*
+8 0 Td
+(four European markets\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 565.2398 cm
+q
+BT
+1 0 0 1 10 1.7 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Own the customer ordering journey from quote to delivery\054 translating requirements into React\057Next\056js screens\054 APIs and clear business rules\056) Tj
+T*
+8 0 Td
+ET
+Q
+Q
+q
+1 0 0 1 31 554.1398 cm
+q
+BT
+1 0 0 1 10 1.7 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Build billing features that keep order amounts\054 statuses and invoice documents consistent through the payment journey\056) Tj
+T*
+8 0 Td
+ET
+Q
+Q
+q
+1 0 0 1 31 533.1398 cm
+q
+BT
+1 0 0 1 10 11.6 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Integrate TypeScript UIs with Node\056js\057Django REST APIs and PostgreSQL\073 improve authentication\054 protected routes\054 query performance and) Tj
+T*
+8 0 Td
+(error handling\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 512.1398 cm
+q
+BT
+1 0 0 1 10 11.6 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Collaborated on RAG\057LLM content generation that cut manual content effort by 70\045\073 built a production assistant) Tj
+T*
+8 0 Td
+(over company records with vector\055retrieved context and grounded natural\055language answers\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 491.1398 cm
+q
+BT
+1 0 0 1 10 11.6 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Reduced page load time by 50\045\054 reached 90\053 Lighthouse scores and contributed to a 55\045 retention lift through lazy loading\054 state and form) Tj
+T*
+8 0 Td
+(improvements\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 470.1398 cm
+q
+BT
+1 0 0 1 10 11.6 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Added two\055person approvals and emergency feature flags for sensitive financial flows\073 introduced Claude\057Codex\057MCP workflows and automated) Tj
+T*
+8 0 Td
+(60\045 of routine bug\055resolution tasks with review\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 467.4398 cm
+Q
+q
+1 0 0 1 31 457.4398 cm
+q
+BT
+1 0 0 1 0 1.6 Tm
+10 TL
+/F2 8.4 Tf
+0 0 0 rg
+(Software Development Engineer I \174 Onelab Ventures) Tj
+/F1 8.4 Tf
+(   ) Tj
+0.270588 0.329412 0.407843 rg
+(Mar 2023 \055 Aug 2024) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 436.8398 cm
+q
+BT
+1 0 0 1 10 11.6 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Delivered enterprise software for NSE\055Corpository\054 Reliance Foundation RFIS and Complimate from requirements through release\054 on\055premise) Tj
+T*
+8 0 Td
+(deployment and production support\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 425.7398 cm
+q
+BT
+1 0 0 1 10 1.7 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Built API\055backed admin and communications workflows with security\054 validation and client\055specific controls\056) Tj
+T*
+8 0 Td
+ET
+Q
+Q
+q
+1 0 0 1 31 414.6398 cm
+q
+BT
+1 0 0 1 10 1.7 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Refactored shared logic\054 reducing code duplication from 27\045 to 13\045\054 and resolved production issues across client environments\056) Tj
+T*
+8 0 Td
+ET
+Q
+Q
+q
+1 0 0 1 31 411.9398 cm
+Q
+q
+1 0 0 1 31 395.9398 cm
+q
+0.090196 0.168627 0.301961 rg
+BT
+1 0 0 1 0 1.3 Tm
+/F2 9.7 Tf
+11 TL
+(SELECTED PRODUCT WORK) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 393.3898 cm
+q
+0.55 w
+1 J
+0.72549 0.776471 0.835294 RG
+n
+0 0 m
+533.2756 0 l
+S
+Q
+Q
+q
+1 0 0 1 31 381.3898 cm
+q
+BT
+1 0 0 1 0 1.6 Tm
+10 TL
+/F2 8.4 Tf
+0 0 0 rg
+(YourKhata \174 Independently Built Product) Tj
+/F1 8.4 Tf
+(   ) Tj
+0.270588 0.329412 0.407843 rg
+(Sep 2026 \055 Present) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 360.7898 cm
+q
+BT
+1 0 0 1 10 11.6 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Built the initial YourKhata product to bring customer\054 financial and operational records into one platform and reduce) Tj
+T*
+8 0 Td
+(fragmented workflows\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 339.7898 cm
+q
+BT
+1 0 0 1 10 11.6 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Implemented multi\055tenant data separation for multiple businesses under one login\054 with role\055based access and) Tj
+T*
+8 0 Td
+(audit\055traceable corrections to protect data and preserve reliable histories\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 318.7898 cm
+q
+BT
+1 0 0 1 10 11.6 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Built with Next\056js SSR\054 React\054 TypeScript\054 Redux Toolkit\054 Tailwind CSS\054 Python\054 Django REST Framework and PostgreSQL\073 deployed with) Tj
+T*
+8 0 Td
+(Docker and Nginx\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 297.7898 cm
+q
+BT
+1 0 0 1 10 11.6 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Achieved PageSpeed Insights scores of 99\053 desktop and 90\053 mobile through SSR\054 edge caching and technical SEO\072 metadata\057canonicals\054) Tj
+T*
+8 0 Td
+(sitemap\057robots controls\054 FAQ JSON\055LD\054 Search Console and GA4\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 286.6898 cm
+q
+BT
+1 0 0 1 10 1.7 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Used Claude Code\054 Codex and MCP for specification\054 implementation\054 debugging and test exploration\073 validated generated changes\056) Tj
+T*
+8 0 Td
+ET
+Q
+Q
+q
+1 0 0 1 31 283.9898 cm
+Q
+q
+1 0 0 1 31 267.9898 cm
+q
+0.090196 0.168627 0.301961 rg
+BT
+1 0 0 1 0 1.3 Tm
+/F2 9.7 Tf
+11 TL
+(SELECTED PROJECTS) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 265.4398 cm
+q
+0.55 w
+1 J
+0.72549 0.776471 0.835294 RG
+n
+0 0 m
+533.2756 0 l
+S
+Q
+Q
+q
+1 0 0 1 31 253.4398 cm
+q
+BT
+1 0 0 1 0 1.6 Tm
+10 TL
+/F2 8.4 Tf
+0 0 0 rg
+(Generative AI Job Application Assistant) Tj
+/F1 8.4 Tf
+(   ) Tj
+0.270588 0.329412 0.407843 rg
+(Personal project) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 232.8398 cm
+q
+BT
+1 0 0 1 10 11.6 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Set up a self\055hosted AI job\055search app with Next\056js\057TypeScript\054 PostgreSQL\057Prisma and Docker\054 using an open\055source foundation\056) Tj
+T*
+8 0 Td
+(Configured provider\055ready LLM workflows with structured profile\057JD context\054 prompt engineering\054 fit\057gap analysis and document drafting\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 211.8398 cm
+q
+BT
+1 0 0 1 10 11.6 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Supports an optional scheduled job\055search agent\054 structured outputs\054 application tracking and human\055in\055the\055loop review\073 the candidate) Tj
+T*
+8 0 Td
+(reviews every draft and submits applications manually\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 209.1398 cm
+Q
+q
+1 0 0 1 31 199.1398 cm
+q
+BT
+1 0 0 1 0 1.6 Tm
+10 TL
+/F2 8.4 Tf
+0 0 0 rg
+(ml\055uikit \174 React Component Library) Tj
+/F1 8.4 Tf
+(   ) Tj
+0.270588 0.329412 0.407843 rg
+(Published on npm) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 178.5398 cm
+q
+BT
+1 0 0 1 10 11.6 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Built and published a reusable React\057TypeScript component library on npm using shadcn\057ui and Radix UI\073 owned typed APIs\054 theming\054) Tj
+T*
+8 0 Td
+(Storybook documentation and packaging\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 167.4398 cm
+q
+BT
+1 0 0 1 10 1.7 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Developed phone\054 date\055range\054 search\054 form\054 pagination\054 typography and sidebar components with dark\055mode support\056) Tj
+T*
+8 0 Td
+ET
+Q
+Q
+q
+1 0 0 1 31 146.4398 cm
+q
+BT
+1 0 0 1 10 11.6 Tm
+-8 0 Td
+9.9 TL
+/F1 8.2 Tf
+0 0 0 rg
+<7f> Tj
+(  Configured ESM\057CommonJS builds\054 declarations\054 dependency externalization and tree\055shaking\073 added Storybook accessibility and) Tj
+T*
+8 0 Td
+(Vitest\057Playwright tests\056) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 143.7398 cm
+Q
+q
+1 0 0 1 31 127.7398 cm
+q
+BT
+1 0 0 1 0 1.3 Tm
+11 TL
+/F2 9.7 Tf
+0.090196 0.168627 0.301961 rg
+(EDUCATION \046 LANGUAGES) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 125.1898 cm
+q
+0.55 w
+1 J
+0.72549 0.776471 0.835294 RG
+n
+0 0 m
+533.2756 0 l
+S
+Q
+Q
+q
+1 0 0 1 31 113.4898 cm
+q
+BT
+1 0 0 1 0 1.5 Tm
+9.7 TL
+/F2 8.2 Tf
+0 0 0 rg
+(B\056Tech\054 Computer Science) Tj
+/F1 8.2 Tf
+( \174 U\056I\056E\056T\056\054 C\056S\056J\056M\056 University\054 Kanpur\054 India \174 2019 \055 2023) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 31 103.7898 cm
+q
+BT
+1 0 0 1 0 1.5 Tm
+9.7 TL
+/F1 8.2 Tf
+0 0 0 rg
+(English \050Professional\051) Tj
+T*
+(Hindi \050Native\051) Tj
+T*
+ET
+Q
+Q
+
+endstream
+endobj
+6 0 obj
+<<
+/F1 7 0 R
+/F2 8 0 R
+>>
+endobj
+7 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+8 0 obj
+<<
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000054 00000 n 
+0000000113 00000 n 
+0000000162 00000 n 
+0000000361 00000 n 
+0000011854 00000 n 
+0000011895 00000 n 
+0000012002 00000 n 
+trailer
+<<
+/Size 9
+/Root 3 0 R
+/Info 1 0 R
+>>
+startxref
+12114
+%%EOF

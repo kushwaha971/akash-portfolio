@@ -1,112 +1,397 @@
 import './style.css';
 
-const paths = {
-  'arrow-up-right': '<path d="M7 17 17 7M7 7h10v10"/>', 'arrow-up':'<path d="m5 12 7-7 7 7M12 5v14"/>',
-  search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/>', sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>', moon:'<path d="M20.8 13A9 9 0 0 1 11 3.2 9 9 0 1 0 20.8 13Z"/>',
-  mail:'<rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/>', 'map-pin':'<path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>',
-  github:'<path d="M9 19c-4 1-4-2-6-2m12 5v-4a3.5 3.5 0 0 0-1-2.8c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.3 4a5 5 0 0 0-.1-4S18 0 15 1.6a14 14 0 0 0-6 0C6 0 4.8 0 4.8 0a5 5 0 0 0-.1 4 5.4 5.4 0 0 0-1.5 4.2c0 5.4 3.5 6.6 6.8 7A3.5 3.5 0 0 0 9 18v4" transform="translate(1 2) scale(.9)"/>',
-  plus:'<path d="M12 5v14M5 12h14"/>', bookmark:'<path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16l-6-4Z"/>', box:'<path d="m12 3 9 5v9l-9 5-9-5V8Z M3 8l9 5 9-5M12 13v9M7.5 5.5l9 5"/>', copy:'<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/>',
-  'chevron-down':'<path d="m6 9 6 6 6-6"/>', 'graduation-cap':'<path d="m2 9 10-5 10 5-10 5ZM6 11v6c4 3 8 3 12 0v-6M22 9v7"/>', 'wifi-off':'<path d="m2 2 20 20M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5-2.5M2 9a16 16 0 0 1 4-2M10 5a16 16 0 0 1 12 4M16 11a10 10 0 0 1 3 2M12 20h.01"/>', shield:'<path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6ZM9 12l2 2 4-4"/>', download:'<path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/>', check:'<path d="m5 12 4 4L19 6"/>'
+const iconPaths = {
+  search: '<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>',
+  moon: '<path d="M20.8 13A9 9 0 0 1 11 3.2 9 9 0 1 0 20.8 13Z"/>',
+  mail: '<rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/>',
+  pin: '<path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>',
+  arrow: '<path d="M7 17 17 7M7 7h10v10"/>',
+  download: '<path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/>',
+  layers: '<path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/>',
+  spark: '<path d="m12 2 1.5 7.5L21 12l-7.5 1.5L12 21l-1.5-7.5L3 12l7.5-2.5L12 2Z"/>',
+  users: '<path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M10 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
+  github: '<path d="M9 19c-4 1-4-2-6-2m12 5v-4a3.5 3.5 0 0 0-1-2.8c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.3 4a5 5 0 0 0-.1-4S18 0 15 1.6a14 14 0 0 0-6 0C6 0 4.8 0 4.8 0a5 5 0 0 0-.1 4 5.4 5.4 0 0 0-1.5 4.2c0 5.4 3.5 6.6 6.8 7A3.5 3.5 0 0 0 9 18v4" transform="translate(1 2) scale(.9)"/>',
+  check: '<path d="m5 12 4 4L19 6"/>'
 };
-const icon = name => `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths['arrow-up-right']}</svg>`;
-function hydrateIcons(root = document) { root.querySelectorAll('[data-icon]').forEach(el => { el.innerHTML = icon(el.dataset.icon); }); }
+
+function make(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+function icon(name) {
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.setAttribute('fill', 'none');
+  svg.setAttribute('stroke', 'currentColor');
+  svg.setAttribute('stroke-width', '1.6');
+  svg.setAttribute('stroke-linecap', 'round');
+  svg.setAttribute('stroke-linejoin', 'round');
+  svg.setAttribute('aria-hidden', 'true');
+  svg.innerHTML = iconPaths[name] || iconPaths.arrow;
+  return svg;
+}
+function addIcon(node, name) { node.append(icon(name)); }
+
 const projects = [
-  {"id": "yourkhata", "name": "YourKhata", "category": "product", "type": "BUSINESS MANAGEMENT PLATFORM", "status": "Live · Independently built", "description": "A modular business platform for ledgers, billing, stock, fees and bookings.", "tags": ["React", "Next.js", "TypeScript", "Redux Toolkit", "Tailwind CSS", "Django / DRF", "PostgreSQL"], "details": "I independently built and launched YourKhata to bring everyday business records out of scattered notebooks and spreadsheets into one usable application. Business owners can track who owes what, create GST bills, manage stock and record payments without maintaining separate systems. I owned the product across requirements, interface design, frontend development, backend APIs, database workflows and launch.", "bullets": ["Shop & billing: built customer and supplier ledgers, running balances, GST invoices with CGST/SGST or IGST, estimates, credit notes, purchase bills, expenses and inventory adjustments. Added low-stock views, credit limits and aging to help owners follow up on dues.", "Shared platform architecture: connected modules through common contacts, money records, payments, documents, reminders, reports and team roles. Supported more than one business under one login, keeping each business’s records separate.", "Lending & collections: implemented borrower records, agreed loan schedules, collection rounds, dated repayment histories and statements. This module keeps records; it does not lend or move money.", "Memberships & bookings: added library catalogues, book issues/returns and fines; gym plans, renewals, attendance and fee receipts; and hotel rooms, bookings, check-in/check-out and guest bills.", "Frontend ownership: built responsive React / Next.js interfaces in TypeScript with Redux Toolkit, reusable UI foundations and Tailwind CSS. Designed data-heavy tables, forms and dashboards for phone and desktop use, with Hindi/English and light/dark themes.", "Backend & data: built Django REST Framework APIs and PostgreSQL workflows for business records, billing and permissions. Kept ledger balances and financial records consistent across the screens and API operations.", "Trust & access: implemented separate owner, admin, staff and accountant roles. Preserved the original record when an entry is corrected or reversed, with a reason and activity history so changes can be traced.", "Documents & portability: added PDF bills and statements, browser-accessible document links, CSV import/export and downloadable business data. Bills and receipts carry the business’s own name and logo.", "Payment workflow: generated UPI QR codes from the business’s own UPI ID so customers pay the business directly. Added payment records and WhatsApp reminder flows without routing money through the platform.", "Engineering trade-off: kept the core shared while giving each module its own screens and records. This reduces duplicated contacts and workflows while keeping the application understandable as new business types are added."], "note": "Independent product · Built from development through launch. Public feature scope is shown on the live website; no user or revenue metrics are claimed.", "url": "https://yourkhata.com/", "linkLabel": "Explore YourKhata"},
-  {id:'aira', name:'Aira', category:'exploration', type:'AI SYSTEM ARCHITECTURE', status:'Architecting · Pre-MVP', description:'A user-owned context and memory layer that travels across AI tools.', tags:['Python','SQLite + FTS5','Vector retrieval','MCP','System design'], details:'I’m architecting Aira: a local-first memory and context layer that lets AI tools work from a shared, user-controlled understanding of preferences, projects, and decisions. I defined the system boundaries, memory model, retrieval pipeline, and phased MVP plan.', bullets:['Architecture: one local daemon, with REST, MCP, and hooks as thin integration surfaces. A provider-independent core separates business logic from model adapters.','Memory model: typed, scoped, versioned records with provenance, confidence, supersession, and an auditable lifecycle. Raw conversations remain separate from canonical memory.','Retrieval: combine SQLite FTS5 and vector search, fuse and rank candidates, diversify results, and assemble context within a token budget.','Privacy: exclude disallowed scopes before retrieval; design explicit grants, private sessions, and reviewable injection logs into the system.','Roadmap: establish portable memory and inspectable context first, then expand into browser integrations, editor awareness, and encrypted sync.'], note:'Architecture and MVP design in progress. Implementation and release follow the phased plan.'},
-  {"id": "ml-uikit", "name": "ml-uikit", "category": "open-source", "type": "REACT COMPONENT LIBRARY", "status": "Built & published · React / TypeScript", "description": "Typed React components, product-ready inputs and reusable application patterns.", "tags": ["React 18 / 19", "TypeScript", "Tailwind CSS", "shadcn/ui", "Radix UI", "Storybook", "Vite"], "art": "uikit", "details": "I built and published ml-uikit to solve repeated UI work across applications. My ownership covered reusable React components, their TypeScript APIs, consistent styling, Storybook examples and npm packaging. The project shows how I approach frontend engineering beyond a single screen: create foundations other developers can understand, customize and build on.", "bullets": ["Component architecture — I organized an ML-prefixed public API with exported prop and value types, making components discoverable and keeping their integration consistent in TypeScript applications.", "Practical product controls — I extended the library with phone inputs and country options, date-range and search inputs, typography variants, icon buttons and table-pagination controls, alongside reusable forms, charts and sidebar patterns.", "Consistency with flexibility — I used Tailwind CSS, component variants and class merging to give applications a shared visual foundation while allowing consumers to override styles. The library includes dark-mode support and distributed CSS.", "Developer experience — I added Storybook stories for isolated component development and documentation. The project also configures accessibility tooling and Vitest/Playwright story testing to support review of component behavior.", "Distribution and integration — I set up ES-module and CommonJS builds, declaration files and source maps, with externalized dependencies and preserved modules. React 18/19 peer dependencies and tree-shaking configuration support use in consuming applications.", "Engineering judgment — I built on shadcn/ui and Radix foundations instead of recreating every primitive. My work focused on the reusable package, application-facing patterns, customization and developer workflow.", "Outcome — I published the library on npm and used Storybook to develop and inspect components separately from application screens. This created a consistent starting point for UI work across multiple applications."], "note": "Built on shadcn/ui and Radix UI. Described scope reflects the inspected development repository; the published version may differ.", "url": "https://libraries.io/npm/ml-uikit", "linkLabel": "Explore ml-uikit on npm", "summaryLabel": "My role & engineering contribution", "role": "Library author · Component architecture, developer tooling & npm publishing", "impact": "A shared UI foundation that standardizes interfaces across applications and reduces repeated component development."},
-  {id:'bug-buster', name:'Bug Buster', category:'product', type:'DEVELOPER TOOL', status:'AI automation', description:'Connecting Jira and AI to simplify repetitive bug-analysis workflows.', tags:['OpenAI API','Jira','Automation'], art:'bugbuster', details:'An AI-powered Jira automation tool designed to help analyze and resolve bugs, reducing repetitive debugging work and improving developer turnaround.', bullets:['Jira integration for bug-analysis workflows.','OpenAI API integration for AI-assisted resolution.','Automation focused on repetitive debugging tasks.'], note:'Project described in my résumé. Public demo and source are not currently linked.'},
-  {id:'sci-webhub', name:'Sci-WebHub', category:'open-source', type:'DEPLOYMENT PLATFORM', status:'Public repository', description:'From a GitHub repository to a tracked deployment, with less friction.', tags:['Next.js','Node.js','PostgreSQL'], art:'webhub', details:'A web deployment and hosting project with backend infrastructure for automated deployments through GitHub repository integrations.', bullets:['API services for builds, deployment tracking, and environment configuration.','Database schema for deployments, logs, and version history.','Backend infrastructure to coordinate repository-based deployments.'], url:'https://github.com/kushwaha971/Sci-webhub', linkLabel:'View repository'}
+  {
+    id: 'brandhub', number: '01', category: 'ai', categoryLabel: 'AI PRODUCT · THE BRANDING CLUB',
+    title: 'Brandhub', role: 'Software Engineer II · Current experience',
+    status: 'Production B2B SaaS · AI workflows',
+    summary: 'Customer, ordering, billing and finance workflows for a platform serving 8,000+ brands across four European markets.',
+    metrics: [['8,000+', 'brands on the platform'], ['70%', 'less manual content effort · team outcome'], ['50%', 'faster page-load time']],
+    overview: 'Brandhub is a production B2B SaaS platform used by brands across four European markets. I work on its customer-facing workflows and the services behind ordering, billing and finance operations.',
+    challenge: 'The product combines high-volume business workflows with brand-specific content and data. Users need answers grounded in company records, and content tasks need to move faster without sacrificing review or consistency.',
+    built: [
+      'Built and maintained customer portal, ordering, billing and finance workflows from requirements through development, testing and release.',
+      'Developed React, Next.js, TypeScript and Redux interfaces; contributed Node.js and Django APIs, PostgreSQL changes, authentication and role-based access.',
+      'Built an LLM assistant that answers natural-language questions using company data. RAG retrieval and vector search supply relevant records as context for grounded responses.',
+      'Integrated OpenAI and Gemini APIs, and contributed to prompt and multi-agent workflows for internal use cases.',
+      'Contributed to RAG-assisted content workflows that reduced manual content effort by 70% as a team outcome.',
+      'Improved page-load time by 50% and achieved Lighthouse scores above 90. Used Claude Code, Codex and MCP for code exploration and debugging, reviewing generated changes before release.'
+    ],
+    tradeoff: 'Kept AI responses grounded in retrieved company context and inside application access boundaries, while preserving human review in the content workflow.',
+    stack: ['React', 'Next.js', 'TypeScript', 'Redux', 'Node.js', 'Django / DRF', 'PostgreSQL', 'RAG', 'Vector search', 'OpenAI API', 'Gemini API']
+  },
+  {
+    id: 'aira', number: '02', category: 'ai', categoryLabel: 'AI SYSTEM · PERSONAL BUILD',
+    title: 'Aira', role: 'AI memory and context system',
+    status: 'Working prototype · deployment preparation',
+    summary: 'A user-controlled memory layer that helps AI tools work from consistent preferences, projects and decisions.',
+    metrics: [['Typed memory', 'scoped, versioned records'], ['Hybrid retrieval', 'SQLite FTS5 + vector search'], ['Auditable context', 'provenance and review logs']],
+    overview: 'Aira is a memory and context layer for AI tools. It organizes information into user-controlled records so an assistant can retrieve relevant context without treating raw conversation history as canonical memory.',
+    challenge: 'AI tools often repeat questions or lose important decisions between sessions. A useful memory system needs to preserve provenance, handle changed or superseded facts, respect privacy boundaries, and fit relevant context into a limited token budget.',
+    built: [
+      'Designed a provider-independent core with REST, MCP and hooks as integration surfaces.',
+      'Implemented typed, scoped and versioned memory records with provenance, confidence, supersession and an auditable lifecycle.',
+      'Kept raw conversations separate from canonical memory and filtered disallowed scopes before retrieval.',
+      'Built a retrieval pipeline combining SQLite FTS5 and vector search, with candidate fusion, ranking, diversification and token-budgeted context assembly.',
+      'Added explicit grants, private sessions and reviewable context-injection logs.'
+    ],
+    tradeoff: 'Prioritizes portable memory and inspectable context first; broader integrations and sync are staged behind the core privacy and retrieval model.',
+    stack: ['Python', 'SQLite', 'FTS5', 'Vector retrieval', 'MCP', 'REST', 'Memory systems', 'System design']
+  },
+  {
+    id: 'genai-assistant', number: '03', category: 'ai', categoryLabel: 'GENERATIVE AI · PERSONAL BUILD',
+    title: 'Generative AI Job-Application Assistant', role: 'Product engineering',
+    status: 'Built · human-reviewed workflow',
+    summary: 'Turns a candidate profile and job description into structured fit notes and tailored application drafts.',
+    metrics: [['Profile + JD', 'role-specific context'], ['Structured output', 'fit and skill gaps'], ['Human review', 'before any application']],
+    overview: 'A generative AI assistant for organizing candidate information, role requirements and application materials. It helps produce useful drafts while leaving review and submission decisions with the candidate.',
+    challenge: 'Job applications involve repeated comparisons between the same work history and many role descriptions. The system should reduce repetitive writing while keeping facts traceable to the candidate profile and avoiding unsupported claims.',
+    built: [
+      'Created workflows to organize candidate profiles, resume variants, job descriptions and application tracking.',
+      'Added LLM-powered profile-to-role comparison with structured fit and skill-gap summaries.',
+      'Generated tailored responses and role-specific documents for candidate review.',
+      'Used configurable model-provider integration, validation and editable, candidate-controlled profile data.',
+      'Kept application review and submission under the candidate’s control.'
+    ],
+    tradeoff: 'Optimizes for transparent drafts that a candidate can edit, rather than automatic applications that can misstate experience or preferences.',
+    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Docker', 'LLM integration', 'Prompt engineering']
+  },
+  {
+    id: 'yourkhata', number: '04', category: 'product', categoryLabel: 'INDEPENDENTLY BUILT PRODUCT',
+    title: 'YourKhata', role: 'Product discovery · Full-stack implementation · Deployment',
+    status: 'Live · Independently built',
+    summary: 'A multi-tenant business platform connecting ledgers, invoicing, inventory, expenses, payments and records.',
+    metrics: [['Multi-tenant', 'separate business books'], ['99+ / 90+', 'desktop / mobile PageSpeed'], ['End-to-end', 'product to deployment']],
+    overview: 'YourKhata connects business records that are often managed across separate tools. I independently built the product across requirements, workflow design, interface, backend APIs, data and deployment.',
+    challenge: 'The product needs to make related records work together while keeping each business’s information separated, corrections traceable, and financial data consistent across screens and APIs.',
+    built: [
+      'Built ledger, GST invoicing, purchase, expense, inventory and payment workflows with reports and reminders.',
+      'Supported multiple businesses under one account with separated records and owner, admin, staff and accountant roles.',
+      'Added traceable corrections, PDF statements, CSV import/export, downloadable business data and direct-to-business UPI QR workflows.',
+      'Built responsive React and Next.js interfaces with TypeScript, Redux Toolkit and Tailwind CSS, backed by Django REST APIs and PostgreSQL.',
+      'Managed containerized deployment with Docker, Railway and Nginx, plus scheduled jobs.',
+      'Implemented technical SEO/GEO foundations including solution pages, metadata, canonicals, robots and sitemaps, FAQs and structured data.',
+      'Reached PageSpeed 99+ on desktop and 90+ on mobile.'
+    ],
+    tradeoff: 'Kept common records and permissions shared across workflows, while giving each business type clear screens and purpose-specific operations.',
+    stack: ['React', 'Next.js', 'TypeScript', 'Redux Toolkit', 'Python', 'Django / DRF', 'PostgreSQL', 'Docker', 'Railway', 'Nginx', 'Technical SEO/GEO'],
+    url: 'https://yourkhata.com/',
+    linkLabel: 'Visit YourKhata'
+  },
+  {
+    id: 'ml-uikit', number: '05', category: 'open-source', categoryLabel: 'OPEN SOURCE · PUBLISHED ON NPM',
+    title: 'ml-uikit', role: 'Library author · Component architecture · npm publishing',
+    status: 'Published · React and TypeScript',
+    summary: 'Reusable components and product-ready inputs packaged for use across React applications.',
+    metrics: [['Published', 'npm package'], ['Typed APIs', 'React 18 / 19'], ['Reusable', 'Storybook documented components']],
+    overview: 'I built and published ml-uikit to reduce repeated UI work across applications. The package brings typed React components, interaction patterns and Storybook examples into a reusable library.',
+    challenge: 'Product teams often rebuild the same controls and interaction patterns. A useful library needs a discoverable API, accessible states, sensible theming and packaging that behaves predictably in consuming applications.',
+    built: [
+      'Built reusable components on shadcn/ui and Radix foundations with typed APIs and customizable Tailwind styling.',
+      'Added phone, date-range and search inputs, typography, pagination, forms, sidebars, charts and table controls.',
+      'Added dark-mode support and Storybook examples for component development and documentation.',
+      'Configured ESM/CommonJS distribution, TypeScript declarations, externalized dependencies and tree-shaking.',
+      'Set up Storybook accessibility tooling and Vitest/Playwright story testing.',
+      'Published the package to npm for use by other applications.'
+    ],
+    tradeoff: 'Builds on accessible primitives rather than recreating them, while keeping product-facing APIs composable and customizable.',
+    stack: ['React 18 / 19', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Radix UI', 'Storybook', 'Vite', 'Vitest', 'Playwright'],
+    url: 'https://www.npmjs.com/package/ml-uikit',
+    linkLabel: 'View package on npm'
+  },
+  {
+    id: 'bug-buster', number: '06', category: 'ai', categoryLabel: 'AI AUTOMATION · DEVELOPER TOOL',
+    title: 'Bug Buster', role: 'AI workflow design and integration',
+    status: 'Used in production team workflows',
+    summary: 'A Jira-connected assistant that analyzes bug context and sends a report with suggested fixes.',
+    metrics: [['Jira context', 'issue details and history'], ['AI analysis', 'structured report'], ['Human review', 'before code changes']],
+    overview: 'Bug Buster connects Jira issue context with an OpenAI-powered analysis workflow to make bug investigation more repeatable for developers.',
+    challenge: 'Bug reports can be incomplete or spread across issue details and discussion. Developers spend time collecting context before they can identify likely causes and next steps.',
+    built: [
+      'Connected Jira issue data and relevant context to an OpenAI analysis workflow.',
+      'Generated a structured report with likely causes and suggested fixes when a bug was reported.',
+      'Automated the repetitive handoff from issue creation to an investigation summary.',
+      'Kept engineers responsible for reviewing suggestions and validating any code changes.'
+    ],
+    tradeoff: 'Automates context gathering and first-pass analysis, not the final decision to change or ship code.',
+    stack: ['Jira API', 'OpenAI API', 'Prompt engineering', 'Workflow automation', 'Issue triage']
+  },
+  {
+    id: 'sci-webhub', number: '07', category: 'systems', categoryLabel: 'DEVELOPER TOOLING · DEPLOYMENT',
+    title: 'Sci-WebHub', role: 'Backend and deployment workflow engineering',
+    status: 'Public repository',
+    summary: 'A deployment platform coordinating GitHub-based builds, environment configuration and release history.',
+    metrics: [['GitHub builds', 'repository-triggered workflow'], ['Environment setup', 'tracked configuration'], ['Release history', 'logs and versions']],
+    overview: 'Sci-WebHub provides backend services for build and deployment workflows connected to GitHub repositories.',
+    challenge: 'A project deployment flow needs to coordinate builds, environment settings, logs and version history without losing track of what was shipped.',
+    built: [
+      'Built API services for project builds and environment configuration.',
+      'Created database workflows to track deployments, logs and version history.',
+      'Connected repository-based build steps to deployment records.'
+    ],
+    tradeoff: 'Focused on the backend workflow and traceable release records rather than claiming a large hosting platform or customer scale.',
+    stack: ['Next.js', 'Node.js', 'PostgreSQL', 'GitHub API', 'Deployment workflows'],
+    url: 'https://github.com/kushwaha971/Sci-webhub',
+    linkLabel: 'View repository'
+  }
 ];
+
 const grid = document.querySelector('#project-grid');
-function renderProjects(filter='all') {
- grid.innerHTML = projects.filter(p => filter==='all'||p.category===filter).map((p,index)=>`<details class="project-row" id="project-${p.id}" ${(p.id==='yourkhata'||p.id==='ml-uikit')?'open':''}><summary><span class="project-symbol">${({'yourkhata':'₹','aira':'aı','ml-uikit':'ui','bug-buster':'✳','sci-webhub':'⌘'})[p.id]}</span><span><h3>${p.name}</h3><p>${p.status}</p>${p.role?'<small class="project-role-preview">Component architecture · Developer experience · Published package</small>':''}</span>${icon('chevron-down')}</summary><div class="project-content"><p>${p.details}</p>${p.role?`<div class="project-ownership"><span>MY ROLE</span><p>${p.role}</p><span>WHY IT MATTERS</span><p>${p.impact}</p></div>`:''}<strong>${p.summaryLabel||'Featured'}:</strong><ul>${p.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>${p.note?`<p class="project-note">${p.note}</p>`:''}<div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div>${p.url?`<a class="text-link" href="${p.url}" target="_blank" rel="noopener noreferrer">${p.linkLabel} ↗</a>`:''}</div></details>`).join('');
-}
 const projectDialog = document.querySelector('#project-dialog');
-function openProject(id) {
- const p = projects.find(p=>p.id===id);
- document.querySelector('#project-detail').innerHTML = `<span class="eyebrow">${p.type} · ${p.status}</span><h2 id="project-dialog-title">${p.name}</h2><p>${p.details}</p><ul>${p.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>${p.note?`<p class="project-note">${p.note}</p>`:''}${p.url?`<a class="button primary" href="${p.url}" target="_blank" rel="noopener noreferrer">${p.linkLabel}${icon('arrow-up-right')}</a>`:''}`;
- projectDialog.showModal();
+const projectDetail = document.querySelector('#project-detail');
+document.querySelector('#project-close').addEventListener('click', function () { projectDialog.close(); });
+function tagList(tags) {
+  const list = make('div', 'tag-list');
+  tags.forEach(function (tag) { list.append(make('span', 'tag', tag)); });
+  return list;
 }
-renderProjects();
-document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});renderProjects(button.dataset.filter);}));
-document.querySelector('#project-close').addEventListener('click',()=>projectDialog.close());
+function metricList(metrics) {
+  const list = make('div', 'case-metrics');
+  metrics.forEach(function (metric) {
+    const item = make('div', 'case-metric');
+    item.append(make('strong', '', metric[0]), make('span', '', metric[1]));
+    list.append(item);
+  });
+  return list;
+}
+function renderProjects(filter) {
+  grid.replaceChildren();
+  const shown = projects.filter(function (project) { return filter === 'all' || project.category === filter; });
+  shown.forEach(function (project) {
+    const card = make('article', 'case-card');
+    card.dataset.category = project.category;
+    const top = make('div', 'case-card-top');
+    top.append(make('span', 'case-number', project.number), make('span', 'case-category', project.categoryLabel));
+    card.append(top, make('h3', '', project.title), make('p', 'case-role', project.role), make('p', 'case-summary', project.summary), metricList(project.metrics), tagList(project.stack));
+    const view = make('button', 'case-action', 'Explore case study');
+    view.type = 'button';
+    view.setAttribute('aria-haspopup', 'dialog');
+    view.addEventListener('click', function () { openProject(project.id); });
+    view.append(icon('arrow'));
+    card.append(view);
+    if (project.url) {
+      const external = make('a', 'case-external', project.linkLabel + ' ↗');
+      external.href = project.url;
+      external.target = '_blank';
+      external.rel = 'noopener noreferrer';
+      card.append(external);
+    }
+    grid.append(card);
+  });
+}
+function caseSection(title, body, bullets) {
+  const section = make('section', 'case-detail-section');
+  section.append(make('p', 'case-detail-label', title), make('p', 'case-detail-copy', body));
+  if (bullets && bullets.length) {
+    const list = make('ul', 'case-detail-list');
+    bullets.forEach(function (bullet) { list.append(make('li', '', bullet)); });
+    section.append(list);
+  }
+  return section;
+}
+function openProject(projectId) {
+  const project = projects.find(function (item) { return item.id === projectId; });
+  if (!project) return;
+  projectDetail.replaceChildren();
+  const header = make('div', 'case-detail-header');
+  const close = make('button', 'icon-button case-close', '×');
+  close.type = 'button';
+  close.setAttribute('aria-label', 'Close case study');
+  close.addEventListener('click', function () { projectDialog.close(); });
+  header.append(make('p', 'eyebrow', 'CASE STUDY ' + project.number + ' · ' + project.categoryLabel), close);
+  projectDetail.append(header, make('h2', 'case-detail-title', project.title), make('p', 'case-detail-role', project.role), make('p', 'case-detail-status', project.status), metricList(project.metrics));
+  projectDetail.append(caseSection('OVERVIEW', project.overview), caseSection('THE CHALLENGE', project.challenge), caseSection('WHAT I BUILT', '', project.built), caseSection('TRADE-OFFS & OUTCOME', project.tradeoff));
+  const tech = make('section', 'case-detail-section');
+  tech.append(make('p', 'case-detail-label', 'TECH STACK'), tagList(project.stack));
+  projectDetail.append(tech);
+  if (project.note) projectDetail.append(make('p', 'project-note', project.note));
+  if (project.url) {
+    const link = make('a', 'button primary case-detail-link', project.linkLabel);
+    link.href = project.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.append(icon('arrow'));
+    projectDetail.append(link);
+  }
+  if (!projectDialog.open) projectDialog.showModal();
+}
+renderProjects('all');
+document.querySelectorAll('[data-filter]').forEach(function (button) {
+  button.addEventListener('click', function () {
+    document.querySelectorAll('[data-filter]').forEach(function (item) {
+      item.classList.toggle('active', item === button);
+      item.setAttribute('aria-pressed', String(item === button));
+    });
+    renderProjects(button.dataset.filter);
+  });
+});
+document.querySelector('#project-close').addEventListener('click', function () { projectDialog.close(); });
+projectDialog.addEventListener('click', function (event) { if (event.target === projectDialog) projectDialog.close(); });
 
-const notes=[
- ['01','Why use a policy layer before AI memory retrieval?','Aira · Architecture decisions','Aira’s design filters out disallowed scopes before retrieving candidate memories. This separates permission checks from relevance scoring: a highly relevant private memory must still be excluded. The proposed context package records why each selected memory was included.'],
- ['02','How do you prevent stale search results?','Application reliability · Study note','When requests finish out of order, an older response can overwrite a newer result. Abort the previous fetch with AbortController and guard state updates with a request identifier. Cancellation saves work; the identifier ensures only the latest request can update the interface.'],
- ['03','What makes a reusable component useful?','Frontend · Design systems','Start with a clear API, accessible semantics, and predictable states. Keep domain-specific behavior outside the primitive, support composition, and document loading, empty, error, and disabled states. Storybook helps make these cases visible to the team.'],
- ['04','How would you approach a slow application?','Performance · Engineering approach','Reproduce the issue and measure a specific interaction before changing code. Use browser profiling to separate network time, long tasks, rendering, and expensive component updates. Make a targeted change, then compare the same scenario. Memoization and lazy loading help only when they address the measured bottleneck.']
+const stackGroups = [
+  ['AI & LLM engineering', ['Python', 'LangChain', 'RAG', 'LLM integration', 'OpenAI API', 'Gemini API', 'Vector retrieval', 'Agentic AI', 'Prompt engineering', 'MCP', 'Claude Code', 'Codex']],
+  ['Frontend', ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Redux Toolkit', 'HTML', 'CSS', 'Tailwind CSS', 'Material UI', 'Storybook']],
+  ['Backend & data', ['Node.js', 'Express', 'Django / DRF', 'FastAPI', 'REST APIs', 'PostgreSQL', 'MongoDB', 'MySQL']],
+  ['Delivery', ['Git / GitHub', 'Docker', 'Railway', 'Nginx', 'Playwright', 'Vitest', 'Code review', 'Performance', 'SEO / GEO']]
 ];
-document.querySelector('#learning-notes').innerHTML=notes.map(([n,q,topic,a])=>`<details class="learning-note"><summary><span class="note-number">${n}</span><span><strong>${q}</strong><small>${topic}</small></span>${icon('plus')}</summary><p>${a}</p></details>`).join('');
+const stackGrid = document.querySelector('#stack-grid');
+stackGroups.forEach(function (group) {
+  const section = make('article', 'stack-group');
+  section.append(make('h3', '', group[0]), tagList(group[1]));
+  stackGrid.append(section);
+});
 
-const linkedinSection=document.createElement('div');
-linkedinSection.className='linkedin-post';
-linkedinSection.innerHTML=`<div><span class="eyebrow">FEATURED ON LINKEDIN</span><h3>A post from my feed</h3><p>Work and ideas, shared in public.</p></div><a class="button" href="https://www.linkedin.com/feed/update/urn:li:activity:7433204217307254784/" target="_blank" rel="noopener noreferrer">Read the post ${icon('arrow-up-right')}</a><details id="linkedin-embed"><summary>Show LinkedIn post ${icon('chevron-down')}</summary><p class="embed-note">If LinkedIn doesn’t display the post, use “Read the post” above.</p><div id="linkedin-frame"></div></details>`;
-document.querySelector('.linkedin-feature').before(linkedinSection);
-document.querySelector('#linkedin-embed').addEventListener('toggle',e=>{if(e.target.open&&!document.querySelector('#linkedin-frame iframe')){const frame=document.createElement('iframe');frame.src='https://www.linkedin.com/embed/feed/update/urn:li:activity:7433204217307254784';frame.title='Akash Kushwaha’s featured LinkedIn post';frame.height='580';frame.loading='lazy';document.querySelector('#linkedin-frame').append(frame);}});
+const searchDialog = document.querySelector('#search-dialog');
+const searchInput = document.querySelector('#search-input');
+const searchResults = document.querySelector('#search-results');
+const searchItems = [
+  {name:'Work', url:'#work', label:'Section'}, {name:'Experience', url:'#experience', label:'Section'},
+  {name:'About', url:'#about', label:'Section'}, {name:'Writing', url:'#writing', label:'Section'},
+  {name:'ml-uikit playground', url:'#ml-uikit', label:'Section'}, {name:'Contact', url:'#contact', label:'Section'},
+  {name:'Resume', url:'/Akash_A_Resume.pdf', label:'PDF'},
+  {name:'LinkedIn', url:'https://www.linkedin.com/in/akash-kushwaha-250949224/', label:'Profile'}
+].concat(projects.map(function (project) { return {name:project.title, project:project.id, label:'Case study'}; }));
+function renderSearch() {
+  const query = searchInput.value.trim().toLowerCase();
+  searchResults.replaceChildren();
+  const matches = searchItems.filter(function (item) { return !query || (item.name + ' ' + item.label).toLowerCase().includes(query); });
+  if (!matches.length) { searchResults.append(make('p', 'search-empty', 'No matches. Try “Aira”, “Brandhub”, “RAG”, or “résumé”.')); return; }
+  matches.forEach(function (item) {
+    const result = make(item.project ? 'button' : 'a', 'search-result');
+    result.append(make('span', '', item.name), make('small', '', item.label + ' ↗'));
+    if (item.project) {
+      result.type = 'button';
+      result.addEventListener('click', function () { searchDialog.close(); openProject(item.project); });
+    } else result.href = item.url;
+    searchResults.append(result);
+  });
+}
+function openSearch() { searchInput.value = ''; renderSearch(); searchDialog.showModal(); searchInput.focus(); }
+document.querySelector('#search-open').addEventListener('click', openSearch);
+document.querySelector('#search-close').addEventListener('click', function () { searchDialog.close(); });
+searchInput.addEventListener('input', renderSearch);
+searchInput.addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') { event.preventDefault(); const first = searchResults.querySelector('.search-result'); if (first) first.click(); }
+});
+document.addEventListener('keydown', function (event) {
+  if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); if (projectDialog.open) projectDialog.close(); searchDialog.open ? searchDialog.close() : openSearch(); }
+});
 
-const themeButton=document.querySelector('#theme-toggle');
-function updateThemeButton(){const dark=document.documentElement.dataset.theme==='dark';themeButton.innerHTML=icon(dark?'moon':'sun');themeButton.setAttribute('aria-label',`Switch to ${dark?'light':'dark'} theme`);document.querySelector('meta[name="theme-color"]').content=dark?'#09090b':'#ffffff';}
-hydrateIcons();updateThemeButton();
-themeButton.addEventListener('click',()=>{document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('akash-theme',document.documentElement.dataset.theme);}catch{}updateThemeButton();});
-function updateClock(){document.querySelector('#india-time').textContent=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit'}).format(new Date());}updateClock();setInterval(updateClock,60000);document.querySelector('#year').textContent=new Date().getFullYear();
-let toastTimer;
-function toast(message){const el=document.querySelector('#toast');el.textContent=message;el.classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('visible'),3200);}
-document.querySelector('#copy-install').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('npm install ml-uikit');toast('Install command copied.');}catch{toast('Copy this command: npm install ml-uikit');}});
-document.querySelector('#demo-action').addEventListener('click',()=>{document.querySelector('#demo-status').textContent='Something good is starting';toast('A small interaction. A good place to start.');});
-document.querySelector('#demo-save').setAttribute('aria-pressed','false');
-document.querySelector('#demo-save').addEventListener('click',e=>{const b=e.currentTarget;const saved=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(saved));b.innerHTML=icon(saved?'check':'bookmark')+(saved?'Saved for later':'Save for later');});
-document.querySelector('.switch').addEventListener('click',e=>{const b=e.currentTarget;const on=b.getAttribute('aria-checked')!=='true';b.setAttribute('aria-checked',String(on));toast(`Demo notifications ${on?'enabled':'disabled'}.`);});
-const searchDialog=document.querySelector('#search-dialog');
-const searchInput=document.querySelector('#search-input');
-const searchItems=[...['About','Work','Components','Experience','Stack','Writing','Learning','Contact'].map(name=>({name,url:`#${name.toLowerCase()}`,label:'Section'})),...projects.map(p=>({name:p.name,project:p.id,label:'Project'})),{name:'BrandHub — The Branding Club',url:'#brandhub-experience',label:'Experience'},{name:'Hire me / WhatsApp',url:'#contact',label:'Contact'},{name:'Résumé',url:'/Akash_Resume.pdf',label:'PDF'},{name:'LinkedIn post',url:'https://www.linkedin.com/feed/update/urn:li:activity:7433204217307254784/',label:'Social'}];
-function renderSearch(){const items=searchItems.filter(i=>`${i.name} ${i.label}`.toLowerCase().includes(searchInput.value.toLowerCase()));const results=document.querySelector('#search-results');results.replaceChildren();if(!items.length){const empty=document.createElement('p');empty.className='search-empty';empty.textContent='No matches. Try “Aira”, “work”, or “résumé”.';results.append(empty);}items.forEach(i=>{const el=document.createElement(i.project?'button':'a');el.className='search-result';el.innerHTML=`<span>${i.name}</span><small>${i.label} ↗</small>`;if(i.url)el.href=i.url;el.addEventListener('click',()=>{searchDialog.close();if(i.project)openProject(i.project);});results.append(el);});}
-function openSearch(){searchInput.value='';renderSearch();searchDialog.showModal();searchInput.focus();}
-document.querySelector('#search-open').addEventListener('click',openSearch);document.querySelector('#search-close').addEventListener('click',()=>searchDialog.close());searchInput.addEventListener('input',renderSearch);searchInput.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();document.querySelector('.search-result')?.click();}});
-document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();if(projectDialog.open)projectDialog.close();searchDialog.open?searchDialog.close():openSearch();}});
-[projectDialog,searchDialog].forEach(dialog=>dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}}));
+const themeButton = document.querySelector('#theme-toggle');
+function updateThemeButton() {
+  const dark = document.documentElement.dataset.theme === 'dark';
+  themeButton.replaceChildren(icon(dark ? 'moon' : 'sun'));
+  themeButton.setAttribute('aria-label', 'Switch to ' + (dark ? 'light' : 'dark') + ' theme');
+  document.querySelector('meta[name="theme-color"]').content = dark ? '#0b0d09' : '#f4f2ed';
+}
+function hydrateIcons(root) { (root || document).querySelectorAll('[data-icon]').forEach(function (element) { element.replaceChildren(icon(element.dataset.icon)); }); }
+hydrateIcons();
+updateThemeButton();
+themeButton.addEventListener('click', function () {
+  document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  try { localStorage.setItem('akash-theme', document.documentElement.dataset.theme); } catch {}
+  updateThemeButton();
+});
+
+function updateClock() {
+  const clock = document.querySelector('#india-time');
+  if (clock) clock.textContent = new Intl.DateTimeFormat('en-GB', {timeZone:'Asia/Kolkata', hour:'2-digit', minute:'2-digit'}).format(new Date());
+}
+updateClock();
+window.setInterval(updateClock, 60000);
+
+const copyButton = document.querySelector('#copy-install');
+copyButton.addEventListener('click', async function () {
+  try { await navigator.clipboard.writeText('npm install ml-uikit'); showToast('Install command copied.'); }
+  catch { showToast('Copy this command: npm install ml-uikit'); }
+});
+document.querySelector('#demo-action').addEventListener('click', function () { document.querySelector('#demo-status').textContent = 'Ready for the next interaction'; showToast('Demo interaction complete.'); });
+document.querySelector('#demo-save').addEventListener('click', function (event) {
+  const button = event.currentTarget;
+  const saved = button.getAttribute('aria-pressed') !== 'true';
+  button.setAttribute('aria-pressed', String(saved));
+  button.replaceChildren(icon(saved ? 'check' : 'arrow'), document.createTextNode(saved ? 'Saved for later' : 'Save for later'));
+});
+document.querySelector('.switch').addEventListener('click', function (event) {
+  const button = event.currentTarget;
+  const enabled = button.getAttribute('aria-checked') !== 'true';
+  button.setAttribute('aria-checked', String(enabled));
+  showToast('Demo notifications ' + (enabled ? 'enabled' : 'disabled') + '.');
+});
+function showToast(message) {
+  const toast = document.querySelector('#toast');
+  toast.textContent = message;
+  toast.classList.add('visible');
+  window.setTimeout(function () { toast.classList.remove('visible'); }, 2800);
+}
 
 import contributionData from './contributions.json';
-const chart=document.querySelector('#contribution-chart');
-const firstDate=new Date(contributionData.days[0].date+'T00:00:00Z');
-const lastDate=new Date(contributionData.days.at(-1).date+'T00:00:00Z');
-const leading=firstDate.getUTCDay();
-const columns=Math.ceil((leading+contributionData.days.length)/7);
-const calendar=document.createElement('div');calendar.className='calendar-layout';
-const weekdays=document.createElement('div');weekdays.className='calendar-weekdays';weekdays.setAttribute('aria-hidden','true');
-weekdays.innerHTML='<span style="grid-row:2">Mon</span><span style="grid-row:4">Wed</span><span style="grid-row:6">Fri</span>';
-const monthLabels=document.createElement('div');monthLabels.className='chart-months';monthLabels.style.setProperty('--weeks',columns);monthLabels.setAttribute('aria-hidden','true');
-const cells=document.createElement('div');cells.className='contribution-chart';cells.style.setProperty('--weeks',columns);cells.setAttribute('role','img');
-cells.setAttribute('aria-label',`${contributionData.total} public GitHub contributions from ${contributionData.days[0].date} to ${contributionData.days.at(-1).date}`);
-for(let i=0;i<leading;i++){const blank=document.createElement('i');blank.className='calendar-empty';cells.append(blank);}
-let previousMonth=-1;
-contributionData.days.forEach((day,index)=>{
- const date=new Date(day.date+'T00:00:00Z');
- if(date.getUTCMonth()!==previousMonth){const label=document.createElement('span');label.textContent=date.toLocaleDateString('en',{month:'short',timeZone:'UTC'});label.style.gridColumn=String(Math.floor((leading+index)/7)+1);monthLabels.append(label);previousMonth=date.getUTCMonth();}
- const cell=document.createElement('i');cell.dataset.level=day.level;
- cell.title=`${day.count===undefined?'Contribution activity':day.count+' contribution'+(day.count===1?'':'s')} on ${day.date}`;cells.append(cell);
+const chart = document.querySelector('#contribution-chart');
+const firstDate = new Date(contributionData.days[0].date + 'T00:00:00Z');
+const lastDate = new Date(contributionData.days.at(-1).date + 'T00:00:00Z');
+const leading = firstDate.getUTCDay();
+const columns = Math.ceil((leading + contributionData.days.length) / 7);
+const calendar = make('div', 'calendar-layout');
+calendar.style.setProperty('--weeks', columns);
+const weekdays = make('div', 'calendar-weekdays');
+weekdays.setAttribute('aria-hidden', 'true');
+weekdays.innerHTML = '<span style="grid-row:2">Mon</span><span style="grid-row:4">Wed</span><span style="grid-row:6">Fri</span>';
+const months = make('div', 'chart-months');
+months.style.setProperty('--weeks', columns);
+months.setAttribute('aria-hidden', 'true');
+const cells = make('div', 'contribution-chart');
+cells.style.setProperty('--weeks', columns);
+cells.setAttribute('role', 'img');
+cells.setAttribute('aria-label', contributionData.total + ' public GitHub contributions from ' + contributionData.days[0].date + ' to ' + contributionData.days.at(-1).date);
+for (let index = 0; index < leading; index += 1) cells.append(make('i', 'calendar-empty'));
+let previousMonth = -1;
+contributionData.days.forEach(function (day, index) {
+  const date = new Date(day.date + 'T00:00:00Z');
+  if (date.getUTCMonth() !== previousMonth) { const label = make('span', '', date.toLocaleDateString('en', {month:'short', timeZone:'UTC'})); label.style.gridColumn = String(Math.floor((leading + index) / 7) + 1); months.append(label); previousMonth = date.getUTCMonth(); }
+  const cell = make('i', '');
+  cell.dataset.level = day.level;
+  cell.title = day.count === undefined ? 'Contribution activity on ' + day.date : day.count + ' contribution' + (day.count === 1 ? '' : 's') + ' on ' + day.date;
+  cells.append(cell);
 });
-calendar.append(monthLabels,weekdays,cells);chart.replaceChildren(calendar);
-document.querySelector('#contribution-count').textContent=contributionData.total;
-document.querySelector('#contribution-snapshot').textContent=`Public GitHub activity · ${firstDate.toLocaleDateString('en',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'})} – ${lastDate.toLocaleDateString('en',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'})}. Updated ${contributionData.fetchedAt}. Private work is not represented here.`;
-const stackGroups=[['Language',[['TypeScript','typescript/typescript-original.svg','#3178c6'],['JavaScript','javascript/javascript-original.svg','#e5b800'],['Python','python/python-original.svg','#3776ab']]],['State management',[['Redux','redux/redux-original.svg','#764abc']]],['Runtime environment',[['Node.js','nodejs/nodejs-original.svg','#5fa04e']]],['Database',[['PostgreSQL','postgresql/postgresql-original.svg','#4169e1'],['MongoDB','mongodb/mongodb-original.svg','#47a248'],['MySQL','mysql/mysql-original.svg','#4479a1']]],['Framework',[['Next.js','nextjs/nextjs-original.svg','#888'],['Tailwind CSS','tailwindcss/tailwindcss-original.svg','#06b6d4'],['Express','express/express-original.svg','#888'],['Django','django/django-plain.svg','#44b78b']]],['Version control',[['Git','git/git-original.svg','#f05032']]],['Library',[['React','react/react-original.svg','#61dafb'],['Storybook','storybook/storybook-original.svg','#ff4785']]],['Tools',[['VS Code','vscode/vscode-original.svg','#007acc'],['Figma','figma/figma-original.svg','#f24e1e']]]];
-document.querySelector('#stack-grid').innerHTML=stackGroups.map(([name,items])=>`<div class="stack-group"><h3>${name}</h3><div class="stack-icons">${items.map(([name,path,color])=>`<span class="tech-icon" style="--color:${color}" title="${name}"><img src="/stack/${path.split('/')[0]}.svg" alt="${name}" loading="lazy" width="30" height="30"/></span>`).join('')}</div></div>`).join('');
-document.querySelectorAll('[data-demo]').forEach(button=>button.addEventListener('click',()=>{const playground=document.querySelector('#component-playground');playground.open=true;playground.scrollIntoView({behavior:'smooth',block:'center'});const target={buttons:'#demo-action',status:'#demo-action',switch:'.switch'}[button.dataset.demo];document.querySelector(target).focus({preventScroll:true});}));document.querySelector('#command-demo').addEventListener('click',openSearch);
-window.addEventListener('scroll',()=>document.querySelector('.site-header').classList.toggle('scrolled',scrollY>160),{passive:true});
+calendar.append(months, weekdays, cells);
+chart.append(calendar);
+document.querySelector('#contribution-count').textContent = contributionData.total;
+document.querySelector('#contribution-snapshot').textContent = 'Public GitHub activity · ' + firstDate.toLocaleDateString('en', {month:'short', day:'numeric', year:'numeric', timeZone:'UTC'}) + ' – ' + lastDate.toLocaleDateString('en', {month:'short', day:'numeric', year:'numeric', timeZone:'UTC'}) + '. Updated ' + contributionData.fetchedAt + '. Private work is not represented here.';
 
-const contactForm = document.querySelector('#contact-form');
-contactForm.addEventListener('submit', event => {
-  event.preventDefault();
-  const data = new FormData(contactForm);
-  const name = String(data.get('name')).trim();
-  const message = String(data.get('message')).trim();
-  if (!name || !message) { toast('Please add your name and a message.'); return; }
-  const text = `Hi Akash, I’m ${name}.\n\n${data.get('intent')}\n\n${message}`;
-  document.querySelector('#contact-whatsapp').href = `https://wa.me/919794620535?text=${encodeURIComponent(text)}`;
-  document.querySelector('#contact-ready').hidden = false;
-  document.querySelector('#contact-whatsapp').focus();
-});
-contactForm.addEventListener('input', () => {
-  document.querySelector('#contact-ready').hidden = true;
-  document.querySelector('#contact-whatsapp').removeAttribute('href');
-});
+document.querySelectorAll('.stack-group').forEach(function (group) { /* stack tags are static */ });
+

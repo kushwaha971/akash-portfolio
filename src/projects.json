@@ -73,11 +73,10 @@
     ],
     "tradeoff": "My focus was delivering and debugging application features within the Onelab team: integrating APIs, validating data, improving maintainability and supporting releases.",
     "stack": [
-      "Application development",
-      "REST API integration",
-      "Validation",
-      "Debugging",
-      "Release support"
+      "React.js",
+      "Node.js",
+      "Oracle Database",
+      "On-premises deployment"
     ],
     "metrics": [
       [
@@ -109,11 +108,11 @@
     ],
     "tradeoff": "My focus was delivering and debugging application features within the Onelab team: integrating APIs, validating data, improving maintainability and supporting releases.",
     "stack": [
-      "Application development",
-      "REST API integration",
-      "Validation",
-      "Debugging",
-      "Release support"
+      "React Native",
+      "Node.js",
+      "MySQL",
+      "MongoDB",
+      "Azure"
     ],
     "metrics": [
       [
@@ -145,11 +144,11 @@
     ],
     "tradeoff": "My focus was delivering and debugging application features within the Onelab team: integrating APIs, validating data, improving maintainability and supporting releases.",
     "stack": [
-      "Application development",
-      "REST API integration",
-      "Validation",
-      "Debugging",
-      "Release support"
+      "React Native",
+      "Node.js",
+      "MySQL",
+      "MongoDB",
+      "Azure"
     ],
     "metrics": [
       [
@@ -181,11 +180,11 @@
     ],
     "tradeoff": "My focus was delivering and debugging application features within the Onelab team: integrating APIs, validating data, improving maintainability and supporting releases.",
     "stack": [
-      "Application development",
-      "REST API integration",
-      "Validation",
-      "Debugging",
-      "Release support"
+      "React.js",
+      "Node.js",
+      "PostgreSQL",
+      "Sequelize",
+      "AWS"
     ],
     "metrics": [
       [

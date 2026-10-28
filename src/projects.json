@@ -200,11 +200,11 @@
     "id": "yourkhata",
     "number": "04",
     "category": "product",
-    "categoryLabel": "INDEPENDENTLY BUILT PRODUCT",
+    "categoryLabel": "AI-NATIVE PRODUCT · INDEPENDENTLY BUILT",
     "title": "YourKhata",
     "role": "Independently built product · Full-stack & AI engineering",
     "status": "Live · Independently built",
-    "summary": "A multi-tenant business product built with Next.js, Python/Django and PostgreSQL, with LLM and RAG workflows for working with business information.",
+    "summary": "An AI-native, multi-tenant business product built with Next.js, Python/Django and PostgreSQL, integrating LLM and RAG workflows with business records.",
     "metrics": [
       [
         "Multi-tenant",
@@ -219,7 +219,7 @@
         "product to deployment"
       ]
     ],
-    "overview": "I’m building YourKhata to keep related business information and everyday operations connected. I handle the product research, interface, Python/Django backend, PostgreSQL data model, AI integration and deployment myself. The product supports multiple tenants and multiple businesses, with clear access boundaries between their records.",
+    "overview": "I’m building YourKhata as an AI-native business product that connects everyday operations with useful assistance grounded in business information. I own product research, Next.js interfaces, Python/Django REST APIs, PostgreSQL data modelling, LLM and RAG integration, and deployment. It supports multiple tenants and multiple businesses, with clear access boundaries between their records.",
     "challenge": "The hard part is making records stay consistent across invoices, stock, payments and reports while keeping each business separate. AI adds another requirement: a useful response needs the correct business context, rather than an unrestricted view of all the stored information.",
     "built": [
       "Translate business workflows into a product that connects ledgers, invoicing, inventory, purchases, expenses and payments.",
@@ -233,15 +233,16 @@
     ],
     "tradeoff": "I keep the accounting and record-management operations deterministic, while using LLM and RAG capabilities to help people find and understand information. Tenant and business permissions apply to the context supplied to AI as well as the ordinary application workflows.",
     "stack": [
+      "AI-native product engineering",
       "Python",
       "Django / DRF",
       "PostgreSQL",
       "Next.js",
+      "LLM integration",
+      "RAG",
       "React",
       "TypeScript",
       "AI integration",
-      "LLM integration",
-      "RAG",
       "Redux Toolkit",
       "Docker",
       "Railway",

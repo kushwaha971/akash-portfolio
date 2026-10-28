@@ -2,44 +2,48 @@
 
 Senior Software Engineer · AI-Native Full-Stack Engineer
 
-A personal portfolio for production SaaS work, applied AI systems, open-source tools, and independent products. The site is built as a lightweight Vite application with semantic HTML, CSS, and JavaScript.
+A multi-page portfolio covering production applications, client delivery, practical AI systems, open-source engineering and independent product work.
 
-## Portfolio sections
+## Pages
 
-- **Selected work:** case studies with an overview, problem, contribution, trade-offs, technologies, and outcomes.
-- **Experience:** current Brandhub work at The Branding Club and earlier client delivery at Onelab Ventures.
-- **About:** product engineering approach, practical AI use, and release discipline.
-- **Technology:** AI/LLM, frontend, backend/data, and delivery skills.
-- **Writing:** selected Medium articles.
-- **Open source:** ml-uikit, published on npm, with an interactive component preview.
-- **Contact:** email and WhatsApp links.
+- Home: introduction, selected products, engineering approach, career journey and FAQs.
+- Work: filterable project index and individual case studies with an overview, challenge, numbered contributions, decisions and technology.
+- Onelab Ventures: an employer overview linking to NSE / Corpository, KisanGrow, Machli and Complimate.
+- About: working style, career timeline, education and languages.
+- Writing: searchable links to published Medium articles, with topic filters.
+- Hire Me: engagement options, enquiry form and both resume downloads. The form prepares an email in the visitor’s email application for review and sending.
 
-## Projects represented
+## Projects
 
-- **Brandhub:** production B2B SaaS workflows and an LLM assistant using RAG and vector retrieval. Metrics are described as team outcomes where appropriate.
-- **YourKhata:** independently built multi-tenant product for connected business records and workflows.
-- **Aira:** working prototype for user-controlled AI memory and context. Deployment preparation is in progress.
-- **Generative AI Job-Application Assistant:** profile-to-role matching and human-reviewed application drafts.
-- **ml-uikit:** published React and TypeScript component library.
-- **Bug Buster:** Jira-connected AI bug-analysis workflow.
-- **Sci-WebHub:** GitHub-based build and deployment tracking platform.
+Brandhub, NSE / Corpository, KisanGrow, Machli, Complimate, YourKhata, ml-uikit, Aira, Generative AI Job-Application Assistant, Bug Buster and Sci-WebHub.
 
-## Development
+Brandhub has an internal case study without external website or app links. Public product links are provided where appropriate for the other projects.
 
-This site uses Vite. From this directory, install dependencies with npm install, start the development server with npm run dev, and create a production build with npm run build.
+## Run locally
 
-## Public files
+```sh
+npm install
+npm run dev
+```
 
-- public/Akash_A_Resume.pdf — AI Full-Stack résumé
-- public/Akash_F_Resume.pdf — Frontend résumé
-- public/akash-profile.png — profile image
-- public/stack — local technology icons
+Open the HTTP address printed by Vite. Opening source HTML with `file://` does not run the application.
 
-Résumé content and project descriptions reflect the profile information and confirmed work details supplied for this portfolio. No customer-sensitive code, screenshots, credentials, or private project data are published.
+```sh
+npm run build
+npm run preview
+```
 
+Deploy `dist/`. Each page has its own built HTML entry, so nested URLs support direct navigation and refresh on static hosting.
 
-## Pages and preview
+## Structure
 
-Run `npm run dev` and open `http://127.0.0.1:5173/` to preview the portfolio. Opening the source HTML through `file://` does not run the Vite application.
+- `index.html`: home page
+- `work/*/index.html`: individual case studies
+- `about/`, `blog/`, `hire/`: supporting pages
+- `src/main.js`: menu, filtering and enquiry behaviour
+- `src/style.css`, `public/studio.css`: responsive visual styles
+- `public/fonts/`: bundled fonts
+- `public/Akash_A_Resume.pdf`: AI Full-Stack resume
+- `public/Akash_F_Resume.pdf`: Frontend resume
 
-The site includes `/work/`, `/about/`, `/blog/`, `/contact/`, and `/work/<project>/` case-study pages. The production build creates HTML entries for these routes so direct navigation and refresh work on static hosting. Deploy the generated `dist/` directory.
+Private client code, credentials and internal screenshots are not included.

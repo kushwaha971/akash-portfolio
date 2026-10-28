@@ -11,7 +11,7 @@ A multi-page portfolio covering production applications, client delivery, practi
 - Onelab Ventures: an employer overview linking to NSE / Corpository, KisanGrow, Machli and Complimate.
 - About: working style, career timeline, education and languages.
 - Writing: searchable links to published Medium articles, with topic filters.
-- Hire Me: engagement options, enquiry form and both resume downloads. The form prepares an email in the visitor’s email application for review and sending.
+- Hire Me: engagement options, enquiry form and the AI Full-Stack resume download. The form prepares an email in the visitor’s email application for review and sending.
 
 ## Projects
 
@@ -44,6 +44,5 @@ Deploy `dist/`. Each page has its own built HTML entry, so nested URLs support d
 - `src/style.css`, `public/studio.css`: responsive visual styles
 - `public/fonts/`: bundled fonts
 - `public/Akash_A_Resume.pdf`: AI Full-Stack resume
-- `public/Akash_F_Resume.pdf`: Frontend resume
 
 Private client code, credentials and internal screenshots are not included.

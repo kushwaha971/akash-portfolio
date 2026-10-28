@@ -1,7 +1,7 @@
 const menu = document.querySelector('.menu-toggle');
 if (menu) {
  const nav = document.createElement('nav'); nav.id='mobile-nav'; nav.className='mobile-nav-panel'; nav.setAttribute('aria-label','Mobile navigation'); nav.hidden=true;
- for (const [href,label] of [['/work/','Work'],['/about/','About'],['/blog/','Writing'],['/Akash_A_Resume.pdf','AI Full-Stack resume ↓'],['/Akash_F_Resume.pdf','Frontend resume ↓'],['/hire/','Hire Me']]) {const a=document.createElement('a');a.href=href;a.textContent=label;nav.append(a);}
+ for (const [href,label] of [['/work/','Work'],['/about/','About'],['/blog/','Writing'],['/Akash_A_Resume.pdf','Resume ↓'],['/hire/','Hire Me']]) {const a=document.createElement('a');a.href=href;a.textContent=label;nav.append(a);}
  document.querySelector('.studio-nav').append(nav);
  menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close menu':'Open menu');nav.hidden=!open;});
  document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.hidden=true;menu.setAttribute('aria-expanded','false');}});

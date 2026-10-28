@@ -3,11 +3,11 @@
     "id": "brandhub",
     "number": "01",
     "category": "ai",
-    "categoryLabel": "AI PRODUCT \u00b7 THE BRANDING CLUB",
+    "categoryLabel": "THE BRANDING CLUB · PRODUCT ENGINEERING",
     "title": "Brandhub",
-    "role": "Software Engineer II \u00b7 Current experience",
-    "status": "Production B2B SaaS \u00b7 AI workflows",
-    "summary": "Customer, ordering, billing and finance workflows for a platform serving 8,000+ brands across four European markets.",
+    "role": "Software Engineer II · The Branding Club",
+    "status": "Production B2B SaaS · AI workflows",
+    "summary": "Full-stack and AI engineering on Brandhub: business workflows, Python/Django APIs, PostgreSQL data and a company-data LLM assistant.",
     "metrics": [
       [
         "8,000+",
@@ -15,57 +15,59 @@
       ],
       [
         "70%",
-        "less manual content effort \u00b7 team outcome"
+        "less manual content effort · team outcome"
       ],
       [
         "50%",
         "faster page-load time"
       ]
     ],
-    "overview": "Brandhub is an AI-enabled B2B platform for branded products, connecting supplier, stock, order, invoice and payment workflows. At The Branding Club, I work on the product interfaces, supporting APIs and AI-assisted workflows that help users move from business data to useful action.",
-    "challenge": "Branded-product operations span customer requests, quotations, orders, stock, fulfilment and finance. The engineering challenge is to keep these workflows consistent while making company data accessible through an AI assistant, with the right access boundaries and clear states when requests fail.",
+    "overview": "At The Branding Club, I work as a Software Engineer II on Brandhub, a production B2B SaaS platform serving more than 8,000 brands. My work connects Next.js and TypeScript interfaces with Python/Django services and PostgreSQL, alongside AI features that help users get answers from their business data.",
+    "challenge": "Orders, billing, stock and finance depend on the same business records, so a change in one workflow can affect several others. My work is to make these flows clear and reliable, integrate their APIs, and give the LLM assistant relevant company context without exposing records outside the user’s access.",
     "built": [
-      "Built and maintained customer portal, ordering, billing and finance workflows from requirements through development, testing and release.",
-      "Developed React, Next.js, TypeScript and Redux interfaces; contributed Node.js and Django APIs, PostgreSQL changes, authentication and role-based access.",
-      "Built an LLM assistant that answers natural-language questions using company data. RAG retrieval and vector search supply relevant records as context for grounded responses.",
-      "Integrated OpenAI and Gemini APIs, and contributed to prompt and multi-agent workflows for internal use cases.",
-      "Contributed to RAG-assisted content workflows that reduced manual content effort by 70% as a team outcome.",
-      "Improved page-load time by 50% and achieved Lighthouse scores above 90. Used Claude Code, Codex and MCP for code exploration and debugging, reviewing generated changes before release.",
-      "Worked with designers, backend engineers and business users to turn operational requirements into reusable components, forms, tables and reporting flows.",
-      "Handled data loading, validation and API failures across business-critical flows so users receive clear feedback and can safely continue their work."
+      "Build and maintain ordering, billing, finance and customer-portal features, working from requirements through implementation, debugging and release.",
+      "Develop Next.js, React and TypeScript interfaces with reusable components, forms, tables and Redux state. Handle loading, validation and API failures within each workflow.",
+      "Work across Python/Django REST APIs and PostgreSQL-backed services, including data integration, authentication and role-based access.",
+      "Built an LLM assistant for questions about company data. RAG and vector retrieval bring relevant context into the request so answers can use business records.",
+      "Integrate OpenAI and Gemini APIs and work on prompts, context handling and agentic workflows, with review points for generated output.",
+      "Contributed to AI-assisted content workflows that reduced manual content effort by 70% as a team outcome.",
+      "Improved page-load time by 50% and achieved Lighthouse scores above 90 through frontend performance work.",
+      "Collaborate with designers, backend engineers and business stakeholders, review changes and use AI coding tools to support implementation and debugging."
     ],
-    "tradeoff": "Kept AI responses grounded in retrieved company context and inside application access boundaries, while preserving human review in the content workflow.",
+    "tradeoff": "For the assistant, the important boundary is which data can enter the prompt and what the user can act on afterward. For application features, I focus on clear state, reusable components and predictable API behaviour so business users can complete their work.",
     "stack": [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Redux",
-      "Node.js",
+      "Python",
       "Django / DRF",
       "PostgreSQL",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "LLM integration",
       "RAG",
-      "Vector search",
+      "Vector retrieval",
       "OpenAI API",
-      "Gemini API"
+      "Gemini API",
+      "Redux",
+      "Node.js"
     ],
     "url": null
   },
   {
     "id": "nse-india",
     "title": "NSE / Corpository",
-    "role": "Onelab Ventures \u00b7 Enterprise information and data workflows",
+    "role": "Software Development Engineer I · Onelab Ventures",
     "category": "client",
-    "categoryLabel": "CLIENT WORK \u00b7 ONELAB VENTURES",
-    "status": "Client engagement \u00b7 2023\u20132024",
-    "summary": "Client delivery for enterprise information workflows through Onelab Ventures.",
-    "overview": "Client delivery for enterprise information workflows through Onelab Ventures.",
+    "categoryLabel": "ONELAB VENTURES · CLIENT PROJECT",
+    "status": "Work at Onelab Ventures · 2023–2024",
+    "summary": "Work on NSE / Corpository as part of Onelab Ventures’ client delivery team. Enterprise information workflows, API integration and production support.",
+    "overview": "I worked on NSE / Corpository while employed at Onelab Ventures as a Software Development Engineer I. Client delivery for enterprise information workflows through Onelab Ventures.",
     "challenge": "Enterprise users need reliable access to structured information, with clear permissions, validation and predictable application behaviour.",
     "built": [
       "Contributed to application features and API-backed workflows as part of the Onelab delivery team.",
       "Worked on validation, administrative interfaces, integration and debugging across the client application.",
       "Supported production troubleshooting and release work, including on-premise deployment requirements."
     ],
-    "tradeoff": "My contribution was within the Onelab engineering team. The work focused on dependable application delivery, integration and maintainability; product-wide outcomes belong to the client and the wider team.",
+    "tradeoff": "My focus was delivering and debugging application features within the Onelab team: integrating APIs, validating data, improving maintainability and supporting releases.",
     "stack": [
       "Application development",
       "REST API integration",
@@ -75,12 +77,12 @@
     ],
     "metrics": [
       [
-        "Onelab",
-        "client delivery"
+        "Onelab Ventures",
+        "my employer"
       ],
       [
-        "Production",
-        "application workflows"
+        "Client project",
+        "team contribution"
       ]
     ],
     "url": null,
@@ -89,19 +91,19 @@
   {
     "id": "kisangrow",
     "title": "KisanGrow",
-    "role": "Onelab Ventures \u00b7 Content access for agricultural communities",
+    "role": "Software Development Engineer I · Onelab Ventures",
     "category": "client",
-    "categoryLabel": "CLIENT WORK \u00b7 ONELAB VENTURES",
-    "status": "Client engagement \u00b7 2023\u20132024",
-    "summary": "KisanGrow is a Reliance Foundation Information Services content application for farmers, fisherfolk and livestock owners.",
-    "overview": "KisanGrow is a Reliance Foundation Information Services content application for farmers, fisherfolk and livestock owners.",
+    "categoryLabel": "ONELAB VENTURES · CLIENT PROJECT",
+    "status": "Work at Onelab Ventures · 2023–2024",
+    "summary": "Work on KisanGrow as part of Onelab Ventures’ client delivery team. Application workflows for a content product serving agricultural communities.",
+    "overview": "I worked on KisanGrow while employed at Onelab Ventures as a Software Development Engineer I. KisanGrow is a Reliance Foundation Information Services content application for farmers, fisherfolk and livestock owners.",
     "challenge": "Content-led applications need clear navigation, usable interfaces and reliable information delivery across different user needs.",
     "built": [
       "Contributed to client application delivery through Onelab Ventures, working with the team on application workflows and API integration.",
       "Worked on interface behaviour, validation, debugging and improvements during feature delivery.",
       "Collaborated on release support and issue resolution for the client engagement."
     ],
-    "tradeoff": "My contribution was within the Onelab engineering team. The work focused on dependable application delivery, integration and maintainability; product-wide outcomes belong to the client and the wider team.",
+    "tradeoff": "My focus was delivering and debugging application features within the Onelab team: integrating APIs, validating data, improving maintainability and supporting releases.",
     "stack": [
       "Application development",
       "REST API integration",
@@ -111,12 +113,12 @@
     ],
     "metrics": [
       [
-        "Onelab",
-        "client delivery"
+        "Onelab Ventures",
+        "my employer"
       ],
       [
-        "Production",
-        "application workflows"
+        "Client project",
+        "team contribution"
       ]
     ],
     "url": "https://play.google.com/store/apps/details?id=ai.rfis.content&hl=en_IN",
@@ -125,19 +127,19 @@
   {
     "id": "machli",
     "title": "Machli",
-    "role": "Onelab Ventures \u00b7 Marine information for fishing communities",
+    "role": "Software Development Engineer I · Onelab Ventures",
     "category": "client",
-    "categoryLabel": "CLIENT WORK \u00b7 ONELAB VENTURES",
-    "status": "Client engagement \u00b7 2023\u20132024",
-    "summary": "Machli is a Reliance Foundation Information Services application providing ocean-state forecasts and potential fishing-zone information in eight Indian languages.",
-    "overview": "Machli is a Reliance Foundation Information Services application providing ocean-state forecasts and potential fishing-zone information in eight Indian languages.",
+    "categoryLabel": "ONELAB VENTURES · CLIENT PROJECT",
+    "status": "Work at Onelab Ventures · 2023–2024",
+    "summary": "Work on Machli as part of Onelab Ventures’ client delivery team. Application delivery for a marine-information product used by fishing communities.",
+    "overview": "I worked on Machli while employed at Onelab Ventures as a Software Development Engineer I. Machli is a Reliance Foundation Information Services application providing ocean-state forecasts and potential fishing-zone information in eight Indian languages.",
     "challenge": "Marine information needs to be presented clearly for users across languages and locations. The application brings forecasts and advisory information into a usable mobile experience.",
     "built": [
       "Worked on the Machli client engagement as part of the Onelab Ventures engineering team.",
       "Contributed to application workflows, integrations, debugging and feature delivery with the client team.",
       "Supported application quality and release-related troubleshooting."
     ],
-    "tradeoff": "My contribution was within the Onelab engineering team. The work focused on dependable application delivery, integration and maintainability; product-wide outcomes belong to the client and the wider team.",
+    "tradeoff": "My focus was delivering and debugging application features within the Onelab team: integrating APIs, validating data, improving maintainability and supporting releases.",
     "stack": [
       "Application development",
       "REST API integration",
@@ -147,12 +149,12 @@
     ],
     "metrics": [
       [
-        "Onelab",
-        "client delivery"
+        "Onelab Ventures",
+        "my employer"
       ],
       [
-        "Production",
-        "application workflows"
+        "Client project",
+        "team contribution"
       ]
     ],
     "url": "https://play.google.com/store/apps/details?id=ai.rfis.machli&hl=en_IN",
@@ -161,19 +163,19 @@
   {
     "id": "complimate",
     "title": "Complimate",
-    "role": "Onelab Ventures \u00b7 Compliance workflows and business operations",
+    "role": "Software Development Engineer I · Onelab Ventures",
     "category": "client",
-    "categoryLabel": "CLIENT WORK \u00b7 ONELAB VENTURES",
-    "status": "Client engagement \u00b7 2023\u20132024",
-    "summary": "Complimate is a compliance management product bringing client records, documents, obligations and coordination into a shared workspace.",
-    "overview": "Complimate is a compliance management product bringing client records, documents, obligations and coordination into a shared workspace.",
+    "categoryLabel": "ONELAB VENTURES · CLIENT PROJECT",
+    "status": "Work at Onelab Ventures · 2023–2024",
+    "summary": "Work on Complimate as part of Onelab Ventures’ client delivery team. Application workflows and API integration for compliance operations.",
+    "overview": "I worked on Complimate while employed at Onelab Ventures as a Software Development Engineer I. Complimate is a compliance management product bringing client records, documents, obligations and coordination into a shared workspace.",
     "challenge": "Compliance workflows require structured records, predictable access and clear task states. Interface and API behaviour must help users manage detailed information without losing context.",
     "built": [
       "Contributed to the Complimate client engagement at Onelab Ventures.",
       "Worked on API-backed application workflows, validation and administrative functionality.",
       "Collaborated with the delivery team on debugging, maintainability and production support."
     ],
-    "tradeoff": "My contribution was within the Onelab engineering team. The work focused on dependable application delivery, integration and maintainability; product-wide outcomes belong to the client and the wider team.",
+    "tradeoff": "My focus was delivering and debugging application features within the Onelab team: integrating APIs, validating data, improving maintainability and supporting releases.",
     "stack": [
       "Application development",
       "REST API integration",
@@ -183,12 +185,12 @@
     ],
     "metrics": [
       [
-        "Onelab",
-        "client delivery"
+        "Onelab Ventures",
+        "my employer"
       ],
       [
-        "Production",
-        "application workflows"
+        "Client project",
+        "team contribution"
       ]
     ],
     "url": "https://www.complimate.in/",
@@ -200,9 +202,9 @@
     "category": "product",
     "categoryLabel": "INDEPENDENTLY BUILT PRODUCT",
     "title": "YourKhata",
-    "role": "Product discovery \u00b7 Full-stack implementation \u00b7 Deployment",
-    "status": "Live \u00b7 Independently built",
-    "summary": "A multi-tenant business platform connecting ledgers, invoicing, inventory, expenses, payments and records.",
+    "role": "Independently built product · Full-stack & AI engineering",
+    "status": "Live · Independently built",
+    "summary": "A multi-tenant business product built with Next.js, Python/Django and PostgreSQL, with LLM and RAG workflows for working with business information.",
     "metrics": [
       [
         "Multi-tenant",
@@ -217,30 +219,34 @@
         "product to deployment"
       ]
     ],
-    "overview": "YourKhata connects business records that are often managed across separate tools. I independently built the product across requirements, workflow design, interface, backend APIs, data and deployment.",
-    "challenge": "The product needs to make related records work together while keeping each business\u2019s information separated, corrections traceable, and financial data consistent across screens and APIs.",
+    "overview": "I’m building YourKhata to keep related business information and everyday operations connected. I handle the product research, interface, Python/Django backend, PostgreSQL data model, AI integration and deployment myself. The product supports multiple tenants and multiple businesses, with clear access boundaries between their records.",
+    "challenge": "The hard part is making records stay consistent across invoices, stock, payments and reports while keeping each business separate. AI adds another requirement: a useful response needs the correct business context, rather than an unrestricted view of all the stored information.",
     "built": [
-      "Built ledger, GST invoicing, purchase, expense, inventory and payment workflows with reports and reminders.",
-      "Supported multiple businesses under one account with separated records and owner, admin, staff and accountant roles.",
-      "Added traceable corrections, PDF statements, CSV import/export, downloadable business data and direct-to-business UPI QR workflows.",
-      "Built responsive React and Next.js interfaces with TypeScript, Redux Toolkit and Tailwind CSS, backed by Django REST APIs and PostgreSQL.",
-      "Managed containerized deployment with Docker, Railway and Nginx, plus scheduled jobs.",
-      "Implemented technical SEO/GEO foundations including solution pages, metadata, canonicals, robots and sitemaps, FAQs and structured data.",
-      "Reached PageSpeed 99+ on desktop and 90+ on mobile."
+      "Translate business workflows into a product that connects ledgers, invoicing, inventory, purchases, expenses and payments.",
+      "Build the backend in Python and Django REST Framework with PostgreSQL, and the web experience in Next.js, React and TypeScript.",
+      "Implement multi-tenant and multi-business access, with owner, admin, staff and accountant roles controlling access to records and operations.",
+      "Integrate LLM-powered assistance and RAG workflows to retrieve relevant business context and turn questions into useful responses grounded in that information.",
+      "Connect AI functionality to the application’s data and permissions so the selected business determines the context available to the assistant.",
+      "Build reports, reminders, traceable corrections, statements, import/export and payment-related workflows around the same business records.",
+      "Handle Docker-based deployment, scheduled jobs and production configuration, alongside debugging and iteration.",
+      "Implement SEO and GEO foundations: discoverable pages, metadata, canonicals, sitemaps, FAQs and structured data. Achieved PageSpeed 99+ on desktop and 90+ on mobile."
     ],
-    "tradeoff": "Kept common records and permissions shared across workflows, while giving each business type clear screens and purpose-specific operations.",
+    "tradeoff": "I keep the accounting and record-management operations deterministic, while using LLM and RAG capabilities to help people find and understand information. Tenant and business permissions apply to the context supplied to AI as well as the ordinary application workflows.",
     "stack": [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Redux Toolkit",
       "Python",
       "Django / DRF",
       "PostgreSQL",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "AI integration",
+      "LLM integration",
+      "RAG",
+      "Redux Toolkit",
       "Docker",
       "Railway",
       "Nginx",
-      "Technical SEO/GEO"
+      "SEO / GEO"
     ],
     "url": "https://yourkhata.com/",
     "linkLabel": "Visit YourKhata"
@@ -249,11 +255,11 @@
     "id": "ml-uikit",
     "number": "05",
     "category": "open-source",
-    "categoryLabel": "OPEN SOURCE \u00b7 PUBLISHED ON NPM",
+    "categoryLabel": "OPEN SOURCE · PUBLISHED ON NPM",
     "title": "ml-uikit",
-    "role": "Library author \u00b7 Component architecture \u00b7 npm publishing",
-    "status": "Published \u00b7 React and TypeScript",
-    "summary": "Reusable components and product-ready inputs packaged for use across React applications.",
+    "role": "Component-library development · Documentation · npm publishing",
+    "status": "Published · React and TypeScript",
+    "summary": "A published React and TypeScript UI library built on shadcn/ui and Radix, documented in Storybook and used with Next.js applications.",
     "metrics": [
       [
         "Published",
@@ -268,24 +274,25 @@
         "Storybook documented components"
       ]
     ],
-    "overview": "I built and published ml-uikit to reduce repeated UI work across applications. The package brings typed React components, interaction patterns and Storybook examples into a reusable library.",
+    "overview": "I built ml-uikit to avoid rebuilding the same application controls and interaction patterns. It packages reusable React and TypeScript components on shadcn/ui and Radix foundations, with Storybook documentation and integration into Next.js applications.",
     "challenge": "Product teams often rebuild the same controls and interaction patterns. A useful library needs a discoverable API, accessible states, sensible theming and packaging that behaves predictably in consuming applications.",
     "built": [
-      "Built reusable components on shadcn/ui and Radix foundations with typed APIs and customizable Tailwind styling.",
-      "Added phone, date-range and search inputs, typography, pagination, forms, sidebars, charts and table controls.",
-      "Added dark-mode support and Storybook examples for component development and documentation.",
-      "Configured ESM/CommonJS distribution, TypeScript declarations, externalized dependencies and tree-shaking.",
-      "Set up Storybook accessibility tooling and Vitest/Playwright story testing.",
-      "Published the package to npm for use by other applications."
+      "Build reusable React and TypeScript components on shadcn/ui and Radix UI, with customizable Tailwind styling.",
+      "Cover application needs such as phone, search and date-range inputs, forms, pagination, sidebars, charts and table controls.",
+      "Use the components in Next.js applications and keep integration concerns visible in the library’s APIs and documentation.",
+      "Document component variants and states in Storybook so consuming developers can explore behaviour before integrating a component.",
+      "Add dark-mode support, typed APIs and accessibility-focused component tooling.",
+      "Configure ESM/CommonJS packaging, TypeScript declarations, external dependencies and tree-shaking, then publish the library on npm."
     ],
-    "tradeoff": "Builds on accessible primitives rather than recreating them, while keeping product-facing APIs composable and customizable.",
+    "tradeoff": "I reuse established primitives for the interaction foundations and focus my work on the APIs, documentation and product controls that consuming applications need.",
     "stack": [
       "React 18 / 19",
       "TypeScript",
-      "Tailwind CSS",
+      "Next.js integration",
       "shadcn/ui",
-      "Radix UI",
       "Storybook",
+      "Radix UI",
+      "Tailwind CSS",
       "Vite",
       "Vitest",
       "Playwright"
@@ -297,10 +304,10 @@
     "id": "aira",
     "number": "02",
     "category": "ai",
-    "categoryLabel": "AI SYSTEM \u00b7 PERSONAL BUILD",
+    "categoryLabel": "AI SYSTEM · PERSONAL BUILD",
     "title": "Aira",
     "role": "AI memory and context system",
-    "status": "Working prototype \u00b7 deployment preparation",
+    "status": "Working prototype · deployment preparation",
     "summary": "A user-controlled memory layer that helps AI tools work from consistent preferences, projects and decisions.",
     "metrics": [
       [
@@ -341,10 +348,10 @@
     "id": "genai-assistant",
     "number": "03",
     "category": "ai",
-    "categoryLabel": "GENERATIVE AI \u00b7 PERSONAL BUILD",
+    "categoryLabel": "GENERATIVE AI · PERSONAL BUILD",
     "title": "Generative AI Job-Application Assistant",
     "role": "Product engineering",
-    "status": "Built \u00b7 human-reviewed workflow",
+    "status": "Built · human-reviewed workflow",
     "summary": "Turns a candidate profile and job description into structured fit notes and tailored application drafts.",
     "metrics": [
       [
@@ -367,7 +374,7 @@
       "Added LLM-powered profile-to-role comparison with structured fit and skill-gap summaries.",
       "Generated tailored responses and role-specific documents for candidate review.",
       "Used configurable model-provider integration, validation and editable, candidate-controlled profile data.",
-      "Kept application review and submission under the candidate\u2019s control."
+      "Kept application review and submission under the candidate’s control."
     ],
     "tradeoff": "Optimizes for transparent drafts that a candidate can edit, rather than automatic applications that can misstate experience or preferences.",
     "stack": [
@@ -384,7 +391,7 @@
     "id": "bug-buster",
     "number": "06",
     "category": "ai",
-    "categoryLabel": "AI AUTOMATION \u00b7 DEVELOPER TOOL",
+    "categoryLabel": "AI AUTOMATION · DEVELOPER TOOL",
     "title": "Bug Buster",
     "role": "AI workflow design and integration",
     "status": "Used in production team workflows",
@@ -424,7 +431,7 @@
     "id": "sci-webhub",
     "number": "07",
     "category": "systems",
-    "categoryLabel": "DEVELOPER TOOLING \u00b7 DEPLOYMENT",
+    "categoryLabel": "DEVELOPER TOOLING · DEPLOYMENT",
     "title": "Sci-WebHub",
     "role": "Backend and deployment workflow engineering",
     "status": "Public repository",
@@ -450,7 +457,7 @@
       "Created database workflows to track deployments, logs and version history.",
       "Connected repository-based build steps to deployment records."
     ],
-    "tradeoff": "Focused on the backend workflow and traceable release records rather than claiming a large hosting platform or customer scale.",
+    "tradeoff": "Track build configuration, logs and deployment versions together so a release can be traced back to the project and repository workflow that produced it.",
     "stack": [
       "Next.js",
       "Node.js",
